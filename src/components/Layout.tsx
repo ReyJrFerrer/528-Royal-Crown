@@ -1,8 +1,13 @@
 import { Link, Outlet, useLocation } from 'react-router-dom';
 import { Crown, Menu, X, ChevronRight } from 'lucide-react';
 import { useState } from 'react';
-import { businesses } from '../data';
 import { motion, AnimatePresence } from 'motion/react';
+
+const franchises = [
+  { id: 'i-am-miltea', name: 'I AM MILKTEA' },
+  { id: '517-bakery', name: '517 Bakery' },
+  { id: 'xanders-roasted', name: "Xander's Roasted" },
+];
 
 export default function Layout() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -31,13 +36,13 @@ export default function Layout() {
                 </button>
                 <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-xl shadow-xl border border-slate-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all transform origin-top-left scale-95 group-hover:scale-100">
                   <div className="p-2 flex flex-col gap-1">
-                    {businesses.map((b) => (
+                    {franchises.map((f) => (
                       <Link 
-                        key={b.id} 
-                        to={`/franchise/${b.id}`}
+                        key={f.id} 
+                        to={`/${f.id}`}
                         className="px-4 py-3 text-sm rounded-lg hover:bg-slate-50 transition-colors font-medium text-slate-700 hover:text-amber-600"
                       >
-                        {b.name}
+                        {f.name}
                       </Link>
                     ))}
                   </div>
@@ -71,14 +76,14 @@ export default function Layout() {
                 <Link to="/" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-medium text-slate-800">Home</Link>
                 <div className="h-px bg-slate-100" />
                 <span className="text-sm font-semibold text-slate-400 uppercase tracking-wider">Our Franchises</span>
-                {businesses.map((b) => (
+                {franchises.map((f) => (
                   <Link 
-                    key={b.id} 
-                    to={`/franchise/${b.id}`}
+                    key={f.id} 
+                    to={`/${f.id}`}
                     onClick={() => setIsMobileMenuOpen(false)}
                     className="text-lg font-medium text-slate-800 pl-4 border-l-2 border-transparent hover:border-amber-500"
                   >
-                    {b.name}
+                    {f.name}
                   </Link>
                 ))}
                 <div className="h-px bg-slate-100" />
@@ -110,9 +115,9 @@ export default function Layout() {
             <div>
               <h3 className="text-white font-semibold mb-4">Franchises</h3>
               <ul className="space-y-2 text-sm">
-                {businesses.map(b => (
-                  <li key={b.id}>
-                    <Link to={`/franchise/${b.id}`} className="hover:text-amber-500 transition-colors">{b.name}</Link>
+                {franchises.map(f => (
+                  <li key={f.id}>
+                    <Link to={`/${f.id}`} className="hover:text-amber-500 transition-colors">{f.name}</Link>
                   </li>
                 ))}
               </ul>

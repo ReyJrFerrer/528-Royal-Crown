@@ -1,7 +1,12 @@
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, TrendingUp, Users, Award, Coffee, CakeSlice, Drumstick } from 'lucide-react';
-import { businesses } from '../data';
+
+const brands = [
+  { id: 'i-am-miltea', name: 'I AM MILKTEA', tagline: 'Refreshing moments in every cup.', icon: Coffee, color: 'lime' },
+  { id: '517-bakery', name: '517 Bakery', tagline: 'Baked with love, served with a smile.', icon: CakeSlice, color: 'amber' },
+  { id: 'xanders-roasted', name: "Xander's Roasted", tagline: 'Savory perfection in every bite.', icon: Drumstick, color: 'rose' },
+];
 
 export default function Home() {
   return (
@@ -98,17 +103,17 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {businesses.map((business, idx) => {
-              const icons = {
-                'i-am-miltea': Coffee,
-                '517-bakery': CakeSlice,
-                'xanders-roasted': Drumstick
+            {brands.map((brand, idx) => {
+              const Icon = brand.icon;
+              const heroImages = {
+                'i-am-miltea': 'https://picsum.photos/seed/milktea/800/600',
+                '517-bakery': 'https://picsum.photos/seed/bakery/800/600',
+                'xanders-roasted': 'https://picsum.photos/seed/roastedchicken/800/600',
               };
-              const Icon = icons[business.id as keyof typeof icons];
               
               return (
                 <motion.div 
-                  key={business.id}
+                  key={brand.id}
                   initial={{ opacity: 0, scale: 0.95 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
@@ -117,8 +122,8 @@ export default function Home() {
                 >
                   <div className="relative h-64 overflow-hidden">
                     <img 
-                      src={business.heroImage} 
-                      alt={business.name} 
+                      src={heroImages[brand.id as keyof typeof heroImages]} 
+                      alt={brand.name} 
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                       referrerPolicy="no-referrer"
                     />
@@ -127,13 +132,13 @@ export default function Home() {
                       <div className="bg-white/20 backdrop-blur-md p-2.5 rounded-xl text-white border border-white/30">
                         <Icon size={24} />
                       </div>
-                      <h3 className="text-2xl font-bold text-white">{business.name}</h3>
+                      <h3 className="text-2xl font-bold text-white">{brand.name}</h3>
                     </div>
                   </div>
                   <div className="p-8 flex flex-col flex-grow">
-                    <p className="text-slate-600 mb-6 flex-grow">{business.tagline}</p>
+                    <p className="text-slate-600 mb-6 flex-grow">{brand.tagline}</p>
                     <Link 
-                      to={`/franchise/${business.id}`}
+                      to={`/${brand.id}`}
                       className="inline-flex items-center justify-center w-full px-4 py-3 bg-slate-50 hover:bg-slate-100 text-slate-900 font-medium rounded-xl transition-colors border border-slate-200"
                     >
                       Explore Brand

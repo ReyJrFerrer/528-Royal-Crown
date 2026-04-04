@@ -1,7 +1,12 @@
 import { motion } from 'motion/react';
-import { businesses } from '../data';
 import { Link } from 'react-router-dom';
-import { CheckCircle2, ArrowRight, Store, TrendingUp, ShieldCheck } from 'lucide-react';
+import { CheckCircle2, ArrowRight, Store, TrendingUp, ShieldCheck, Coffee, CakeSlice, Drumstick } from 'lucide-react';
+
+const franchises = [
+  { id: 'i-am-miltea', name: 'I AM MILKTEA', tagline: 'Refreshing moments in every cup.', icon: Coffee, color: 'lime', desc: 'Join the I AM MILKTEA family! We offer comprehensive training, marketing support, and a proven business model for aspiring entrepreneurs.' },
+  { id: '517-bakery', name: '517 Bakery', tagline: 'Baked with love, served with a smile.', icon: CakeSlice, color: 'amber', desc: 'Bring the aroma of 517 Bakery to your community. Our franchise program includes recipes, operational guidelines, and ongoing support.' },
+  { id: 'xanders-roasted', name: "Xander's Roasted", tagline: 'Savory perfection in every bite.', icon: Drumstick, color: 'rose', desc: "Start your own Xander's franchise today. Benefit from our established brand, secret recipes, and robust supply chain." },
+];
 
 export default function FranchiseOpportunities() {
   return (
@@ -56,9 +61,16 @@ export default function FranchiseOpportunities() {
         </div>
 
         <div className="space-y-8">
-          {businesses.map((business, idx) => (
+          {franchises.map((franchise, idx) => {
+            const heroImages = {
+              'i-am-miltea': 'https://picsum.photos/seed/milktea/600/400',
+              '517-bakery': 'https://picsum.photos/seed/bakery/600/400',
+              'xanders-roasted': 'https://picsum.photos/seed/roastedchicken/600/400',
+            };
+            
+            return (
             <motion.div 
-              key={business.id}
+              key={franchise.id}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -66,20 +78,20 @@ export default function FranchiseOpportunities() {
             >
               <div className="md:w-1/3 h-64 md:h-auto relative">
                 <img 
-                  src={business.heroImage} 
-                  alt={business.name} 
+                  src={heroImages[franchise.id as keyof typeof heroImages]} 
+                  alt={franchise.name} 
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
                 />
               </div>
               <div className="p-8 md:w-2/3 flex flex-col justify-center">
                 <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-2xl font-bold text-slate-900">{business.name}</h3>
-                  <span className={`px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-${business.color}-100 text-${business.color}-700`}>
+                  <h3 className="text-2xl font-bold text-slate-900">{franchise.name}</h3>
+                  <span className={franchise.id === 'i-am-miltea' ? 'px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-[#d0d91b]/20 text-[#94a036]' : `px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-${franchise.color}-100 text-${franchise.color}-700`}>
                     High Demand
                   </span>
                 </div>
-                <p className="text-slate-600 mb-6 text-lg">{business.franchiseInfo}</p>
+                <p className="text-slate-600 mb-6 text-lg">{franchise.desc}</p>
                 
                 <div className="grid grid-cols-2 gap-4 mb-8">
                   <div className="flex items-center gap-2 text-slate-700">
@@ -105,7 +117,7 @@ export default function FranchiseOpportunities() {
                     Request Info Kit
                   </button>
                   <Link 
-                    to={`/franchise/${business.id}`}
+                    to={`/${franchise.id}`}
                     className="px-6 py-3 bg-slate-100 hover:bg-slate-200 text-slate-900 font-medium rounded-xl transition-colors flex items-center"
                   >
                     View Brand <ArrowRight size={18} className="ml-2" />
@@ -113,7 +125,8 @@ export default function FranchiseOpportunities() {
                 </div>
               </div>
             </motion.div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </div>
