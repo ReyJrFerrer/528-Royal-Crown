@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, TrendingUp, Users, Award, Coffee, CakeSlice, Drumstick } from 'lucide-react';
 
 const brands = [
-  { id: 'i-am-miltea', name: 'I AM MILKTEA', tagline: 'Refreshing moments in every cup.', icon: Coffee, color: 'lime' },
+  { id: 'i-am-milktea', name: 'I AM MILKTEA', tagline: 'Refreshing moments in every cup.', icon: Coffee, color: 'lime' },
   { id: '517-bakery', name: '517 Bakery', tagline: 'Baked with love, served with a smile.', icon: CakeSlice, color: 'amber' },
   { id: 'xanders-roasted', name: "Xander's Roasted", tagline: 'Savory perfection in every bite.', icon: Drumstick, color: 'rose' },
 ];

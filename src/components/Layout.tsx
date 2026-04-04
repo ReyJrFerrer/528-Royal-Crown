@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 
 const franchises = [
-  { id: 'i-am-miltea', name: 'I AM MILKTEA' },
+  { id: 'i-am-milktea', name: 'I AM MILKTEA' },
   { id: '517-bakery', name: '517 Bakery' },
   { id: 'xanders-roasted', name: "Xander's Roasted" },
 ];

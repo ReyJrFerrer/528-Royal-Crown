@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { CheckCircle2, ArrowRight, Store, TrendingUp, ShieldCheck, Coffee, CakeSlice, Drumstick } from 'lucide-react';
 
 const franchises = [
-  { id: 'i-am-miltea', name: 'I AM MILKTEA', tagline: 'Refreshing moments in every cup.', icon: Coffee, color: 'lime', desc: 'Join the I AM MILKTEA family! We offer comprehensive training, marketing support, and a proven business model for aspiring entrepreneurs.' },
+  { id: 'i-am-milktea', name: 'I AM MILKTEA', tagline: 'Refreshing moments in every cup.', icon: Coffee, color: 'lime', desc: 'Join the I AM MILKTEA family! We offer comprehensive training, marketing support, and a proven business model for aspiring entrepreneurs.' },
   { id: '517-bakery', name: '517 Bakery', tagline: 'Baked with love, served with a smile.', icon: CakeSlice, color: 'amber', desc: 'Bring the aroma of 517 Bakery to your community. Our franchise program includes recipes, operational guidelines, and ongoing support.' },
   { id: 'xanders-roasted', name: "Xander's Roasted", tagline: 'Savory perfection in every bite.', icon: Drumstick, color: 'rose', desc: "Start your own Xander's franchise today. Benefit from our established brand, secret recipes, and robust supply chain." },
 ];

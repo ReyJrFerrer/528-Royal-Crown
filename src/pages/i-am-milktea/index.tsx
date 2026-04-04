@@ -1,14 +1,16 @@
 import { motion } from 'motion/react';
-import { MapPin, Clock, Drumstick, Flame, Utensils, Heart, ChevronLeft, ChevronRight, MessageCircle, Star, Leaf, Users, Phone, Mail } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Coffee, Tag, Heart, ChevronLeft, ChevronRight, MessageCircle, Users, Star } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Crown } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
 const heroImages = [
-  'https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=1920&h=1080&fit=crop',
-  'https://images.unsplash.com/photo-1532550907401-a500c9a57435?w=1920&h=1080&fit=crop',
-  'https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=1920&h=1080&fit=crop',
+  'https://scontent.fcrk1-5.fna.fbcdn.net/v/t39.30808-6/650399926_122103291777256103_7014430875862060442_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=dd6889&_nc_eui2=AeG0hGwtiAP5YONEfX8k-Rm4B5xO5D2oVqoHnE7kPahWquvlb1fZTmXt0e56C-Q_lPZzR3oLxIVuBUlm2KUeQqWE&_nc_ohc=UzsbmLBlLpEQ7kNvwHjRBCn&_nc_oc=Adrn3mL2s9kBS--JKgM0ZouzzdkYbiy1FOdApfiMKFFBv8esu3ca3lazQgIEI-Wd1pw&_nc_zt=23&_nc_ht=scontent.fcrk1-5.fna&_nc_gid=uxHGYsIqNLJ-CSIn1ttcjA&_nc_ss=7a3a8&oh=00_Af3CwNxOx89FFRAMsihJZQ-OUYYjO6cqWh9KpoBnAoUHRQ&oe=69D4112B',
+  'https://scontent.fcrk1-4.fna.fbcdn.net/v/t39.30808-6/649079176_122103291981256103_6706803296947917984_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=dd6889&_nc_eui2=AeG9e6obEw0GhBwM4sxf5CUluuqic5Af2Z-66qJzkB_Zn4Kj-JNTbkFIgpODcHVe3R_S0Xd3BNxCodcmkxvxs-gd&_nc_ohc=-9rCwV7N-YwQ7kNvwHoC_CH&_nc_oc=AdpXPELnkUey5fSxHI-Kc_iXOeAwrRA78x2E_vBcAqslNsSIJzlVDWxz458yHR3d9j4&_nc_zt=23&_nc_ht=scontent.fcrk1-4.fna&_nc_gid=QPfwgEIyrTflkcPT78sWJA&_nc_ss=7a3a8&oh=00_Af1QeUnJFkdvKVgdDo6jjm5f0EnPxk0Q4CUHxRGwheTQkg&oe=69D4059C',
+  'https://scontent.fcrk1-1.fna.fbcdn.net/v/t39.30808-6/648295133_122103292383256103_1180980975423930961_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=dd6889&_nc_eui2=AeGnH1Cu8EC5ZP1WfyOTusWNqGOK9QuJF4CoY4r1C4kXgMyFfKFCElrdB_8kjivHk4Tzft69hxE2Ql6fINrvuyGx&_nc_ohc=VU6QSMGxbEQQ7kNvwFWq2zd&_nc_oc=Adrh0eyOBJRxqWIiHp1D2UsjcueDNVVqkIsmTehwSdnLaNeXwCiipEfQRWG6bjZq-JI&_nc_zt=23&_nc_ht=scontent.fcrk1-1.fna&_nc_gid=hFJgr-EfXQ4nh4Rb4Tez7w&_nc_ss=7a3a8&oh=00_Af2be-56TCMSQBQD7P1X-QFIoVSXo4YShBSznbmVtjzCig&oe=69D414DE',
 ];
 
-export default function XandersLechon() {
+export default function IAmMilktea() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
@@ -28,8 +30,8 @@ export default function XandersLechon() {
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1920&h=1080&fit=crop"
-            alt="Delicious roasted food"
+            src="https://scontent.fcrk1-3.fna.fbcdn.net/v/t39.30808-6/659156818_122107003089256103_4553002943123951736_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=13d280&_nc_eui2=AeFxXR4X4IKrcDdBbnFICQxUYeIdLujisthh4h0u6OKy2H6tRHeFCiyUtw4cN3Z04IoOqjcM6d_zUBhN2bG69nuP&_nc_ohc=lfi3QM17iI8Q7kNvwFMF_X9&_nc_oc=AdqGYFaaJZcOkoZXWxpgSumzLCbkc8CKU46nVjhb-CtsOEhebSaQ6oLc-ncZqviWNTs&_nc_zt=23&_nc_ht=scontent.fcrk1-3.fna&_nc_gid=GGYZE2le5LN9afQT4OwnpQ&_nc_ss=7a3a8&oh=00_Af0LUleTqWFhNVgO0chjt1GYjTn16QZyb6AX7oiFgvg9zQ&oe=69D654BD"
+            alt="I AM MILKTEA Background"
             className="w-full h-full object-cover"
             referrerPolicy="no-referrer"
           />
@@ -38,22 +40,35 @@ export default function XandersLechon() {
 
         <div className="relative z-10 px-6 w-full">
           <div className="max-w-4xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8 }}
+              className="mb-8"
+            >
+              <img
+                src="src/assets/iAmMilktea/iammilktea-logo.png"
+                alt="I AM MILKTEA Logo"
+                className="h-32 md:h-40 object-contain mx-auto"
+              />
+            </motion.div>
+
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ delay: 0.2, duration: 0.8 }}
               className="text-5xl md:text-8xl font-bold text-white mb-8 leading-tight tracking-tight"
             >
-              Xander's Lechon
+              I AM MILKTEA
             </motion.h1>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.8 }}
+              transition={{ delay: 0.3, duration: 0.8 }}
               className="text-xl md:text-3xl text-white/95 mb-12 font-light tracking-wide"
             >
-              Masarap. Affordable. Quality.
+              "I Am... Milktea. I Am your daily dose of Joy."
             </motion.p>
 
             <motion.div
@@ -64,13 +79,13 @@ export default function XandersLechon() {
             >
               <a
                 href="#menu"
-                className="px-10 py-4 bg-[#a04527] hover:bg-[#8b3a1f] text-white font-semibold transition-colors duration-300"
+                className="px-10 py-4 bg-[#d0d91b] hover:bg-[#b8c015] text-[#94a036] font-semibold transition-colors duration-300"
               >
                 View Menu
               </a>
               <a
                 href="#contact"
-                className="px-10 py-4 bg-white hover:bg-gray-100 text-[#a04527] font-semibold transition-colors duration-300"
+                className="px-10 py-4 bg-white hover:bg-gray-100 text-[#94a036] font-semibold transition-colors duration-300"
               >
                 Order Now
               </a>
@@ -95,7 +110,7 @@ export default function XandersLechon() {
                 <motion.img
                   key={idx}
                   src={src}
-                  alt={`Xander's Lechon ${idx + 1}`}
+                  alt={`I AM MILKTEA ${idx + 1}`}
                   className="absolute inset-0 w-full h-full object-cover"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: idx === currentSlide ? 1 : 0 }}
@@ -125,7 +140,7 @@ export default function XandersLechon() {
                     key={idx}
                     onClick={() => goToSlide(idx)}
                     className={`h-1.5 transition-all ${
-                      idx === currentSlide ? 'bg-white w-10' : 'bg-white/50 w-1.5 hover:bg-white/75'
+                      idx === currentSlide ? 'bg-[#d0d91b] w-10' : 'bg-white/50 w-1.5 hover:bg-white/75'
                     }`}
                   />
                 ))}
@@ -140,33 +155,33 @@ export default function XandersLechon() {
               className="order-1 lg:order-2 space-y-8"
             >
               <h2 className="text-4xl md:text-6xl font-bold text-slate-900 leading-tight">
-                Masarap. Affordable. Quality.
+                Your Daily Dose of Happiness
               </h2>
               <div className="space-y-6 text-lg text-slate-600 leading-relaxed">
                 <p>
-                  Craving the perfect roast? Whether you need a feast for the whole family or a quick,
-                  budget-friendly meal on the go, Xander's serves up freshly roasted Lechon Manok, juicy
-                  Pork Liempo, and delicious rice meals guaranteed to satisfy your hunger.
+                  Your daily dose of happiness is just a visit away! Whether you are craving a creamy,
+                  refreshing drink or looking for the perfect spot to bond with your barkada, we've got
+                  a cup with your name on it.
                 </p>
                 <p>
-                  Every item is freshly prepared with quality ingredients, ensuring great taste at
-                  affordable prices.
+                  We serve a wide variety of creamy milktea flavors, perfectly paired with our daily
+                  fresh-baked breads.
                 </p>
               </div>
 
               {/* Quick Stats */}
               <div className="grid grid-cols-3 gap-6 pt-8 border-t border-slate-200">
                 <div>
-                  <div className="text-4xl font-bold text-[#a04527] mb-2">100%</div>
+                  <div className="text-4xl font-bold text-[#94a036] mb-2">100%</div>
                   <div className="text-sm text-slate-600">Fresh Daily</div>
                 </div>
                 <div>
-                  <div className="text-4xl font-bold text-[#a04527] mb-2">2</div>
-                  <div className="text-sm text-slate-600">Branches</div>
+                  <div className="text-4xl font-bold text-[#94a036] mb-2">1</div>
+                  <div className="text-sm text-slate-600">Location</div>
                 </div>
                 <div>
-                  <div className="text-4xl font-bold text-[#a04527] mb-2">24/7</div>
-                  <div className="text-sm text-slate-600">Open</div>
+                  <div className="text-4xl font-bold text-[#94a036] mb-2">6</div>
+                  <div className="text-sm text-slate-600">Days/Week</div>
                 </div>
               </div>
             </motion.div>
@@ -175,7 +190,7 @@ export default function XandersLechon() {
       </section>
 
       {/* Tagline Section */}
-      <section className="py-32 bg-[#a04527] text-white">
+      <section className="py-32 bg-[#94a036] text-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -184,12 +199,12 @@ export default function XandersLechon() {
             transition={{ duration: 0.8 }}
             className="text-3xl md:text-5xl font-light leading-relaxed"
           >
-            From our roaster to your table — hot, fresh, and bursting with flavor every single time
+            Refreshing moments in every cup — the perfect blend of taste and joy
           </motion.p>
         </div>
       </section>
 
-      {/* Our Menu - Hot & Fresh Roasts */}
+      {/* Cup Sizes & Pricing */}
       <section id="menu" className="py-32 bg-white">
         <div className="max-w-6xl mx-auto px-6 lg:px-12">
           <motion.div
@@ -198,19 +213,17 @@ export default function XandersLechon() {
             viewport={{ once: true }}
             className="mb-20"
           >
-            <h2 className="text-5xl md:text-7xl font-bold text-slate-900 mb-6">Our Menu</h2>
+            <h2 className="text-5xl md:text-7xl font-bold text-slate-900 mb-6">Our Cup Sizes</h2>
             <p className="text-xl text-slate-600 max-w-2xl">
-              Hot & Fresh Roasts — Perfect for family dinners, gatherings, or when you just want a hearty
-              meal.
+              Choose your perfect size — from a quick sip to a generous treat!
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-slate-200">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-slate-200">
             {[
-              { name: 'Pork Liempo', price: '₱310', description: 'Tender and juicy' },
-              { name: 'Lechon Manok (Regular)', price: '₱290', description: 'Classic favorite' },
-              { name: 'Lechon Manok (Jumbo)', price: '₱340', description: 'Extra large serving' },
-              { name: 'Lechon Manok (Extra)', price: '₱360', description: 'Maximum satisfaction' },
+              { size: 'Small', volume: '12 oz', price: 'From ₱45', description: 'Perfect for a quick treat' },
+              { size: 'Medium', volume: '16 oz', description: 'The classic choice' },
+              { size: 'Large', volume: '22 oz', description: 'Maximum satisfaction' },
             ].map((item, idx) => (
               <motion.div
                 key={idx}
@@ -220,16 +233,20 @@ export default function XandersLechon() {
                 transition={{ delay: idx * 0.05 }}
                 className="bg-white p-10 hover:bg-[#f8f7f4] transition-colors duration-300"
               >
-                <h4 className="text-2xl font-bold text-slate-900 mb-2">{item.name}</h4>
-                <p className="text-slate-500 mb-4">{item.description}</p>
-                <p className="text-5xl font-bold text-[#a04527]">{item.price}</p>
+                <h4 className="text-2xl font-bold text-slate-900 mb-2">{item.size}</h4>
+                <p className="text-slate-500 mb-4">{item.volume}</p>
+                <p className="text-5xl font-bold text-[#94a036]">{item.price}</p>
               </motion.div>
             ))}
+          </div>
+
+          <div className="mt-12 text-center">
+            <p className="text-slate-500 italic">Ask our friendly staff about our available flavors and fresh bread of the day!</p>
           </div>
         </div>
       </section>
 
-      {/* On-The-Go Rice Meals */}
+      {/* Deals & Promos */}
       <section className="py-32 bg-[#f8f7f4]">
         <div className="max-w-6xl mx-auto px-6 lg:px-12">
           <motion.div
@@ -238,67 +255,90 @@ export default function XandersLechon() {
             viewport={{ once: true }}
             className="mb-20"
           >
-            <h2 className="text-5xl md:text-7xl font-bold text-slate-900 mb-6">Rice Meals</h2>
+            <h2 className="text-5xl md:text-7xl font-bold text-slate-900 mb-6">Deals & Promos</h2>
             <p className="text-xl text-slate-600 max-w-2xl">
-              Quick, affordable, and packed with flavor — perfect for lunch or dinner on the go.
+              We love treating our customers! Check out our latest specials.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            {[
-              { name: 'Spicy Garlic Chicken Meal', price: '₱60' },
-              { name: 'Crispy Leeg Meal', price: '₱50' },
-            ].map((meal, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.1 }}
-                className="bg-white p-12 hover:bg-white/80 transition-colors duration-300"
-              >
-                <h4 className="text-3xl font-bold text-slate-900 mb-6">{meal.name}</h4>
-                <p className="text-6xl font-bold text-[#a04527]">{meal.price}</p>
-              </motion.div>
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="bg-white p-12 hover:bg-white/80 transition-colors duration-300"
+            >
+              <div className="flex items-center gap-3 mb-4">
+                <Users className="text-[#d0d91b]" size={28} />
+                <h3 className="text-2xl font-bold text-slate-900">Barkada Treat-Tea!</h3>
+              </div>
+              <p className="text-slate-600 mb-4 text-lg">
+                Buy any 3 cups (any size) and get 1 <strong>FREE Small Size</strong> cup of any flavor!
+              </p>
+              <p className="text-sm text-slate-500">Perfect for sharing with your squad.</p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="bg-white p-12 hover:bg-white/80 transition-colors duration-300"
+            >
+              <div className="flex items-center gap-3 mb-4">
+                <Tag className="text-[#d0d91b]" size={28} />
+                <h3 className="text-2xl font-bold text-slate-900">Double Delight Promo!</h3>
+              </div>
+              <p className="text-slate-600 mb-4 text-lg">
+                Buy 1, Take 1 with a <strong>50% discount</strong> on your second cup!
+              </p>
+              <div className="grid grid-cols-3 gap-4 text-center mt-6">
+                <div>
+                  <p className="text-[#94a036] font-bold">Small</p>
+                  <p className="text-2xl font-bold text-slate-900">₱45</p>
+                </div>
+                <div>
+                  <p className="text-[#94a036] font-bold">Medium</p>
+                  <p className="text-2xl font-bold text-slate-900">₱60</p>
+                </div>
+                <div>
+                  <p className="text-[#94a036] font-bold">Large</p>
+                  <p className="text-2xl font-bold text-slate-900">₱75</p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+
+          <div className="mt-12 text-center">
+            <p className="text-slate-500 text-lg">Follow our Facebook Page @iammilktea for limited-time seasonal promos, new flavors, and giveaways!</p>
           </div>
         </div>
       </section>
 
-      {/* Sides & Refreshments */}
+      {/* Philosophy / Sunday Rest */}
       <section className="py-32 bg-white">
-        <div className="max-w-6xl mx-auto px-6 lg:px-12">
+        <div className="max-w-4xl mx-auto px-6 lg:px-12 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-20"
           >
-            <h2 className="text-5xl md:text-7xl font-bold text-slate-900 mb-6">Sides & Drinks</h2>
-            <p className="text-xl text-slate-600 max-w-2xl">
-              Complete your meal with our homemade specials and refreshing beverages.
+            <Heart className="mx-auto mb-8 text-[#d5261e]" size={64} />
+            <h2 className="text-4xl md:text-6xl font-bold text-slate-900 mb-8">Our Philosophy</h2>
+            <p className="text-xl text-slate-600 mb-12 leading-relaxed">
+              At I AM MILKTEA, we believe that just as a good cup of tea needs time to steep, we also need
+              time to rest and reconnect.
             </p>
+            <div className="bg-[#f8f7f4] rounded-3xl p-12 shadow-lg border border-slate-100 max-w-2xl mx-auto">
+              <h3 className="text-2xl font-bold text-[#d5261e] mb-4">Sunday Rest Day</h3>
+              <p className="text-slate-600 italic mb-4 text-lg">Psalm 136:1 - "Give thanks to the Lord for He is good. His love endures forever."</p>
+              <p className="text-slate-600 text-lg">
+                In observance of the Lord's Day, our store is <strong>CLOSED every Sunday</strong>. We encourage
+                our staff and customers to spend this time in fellowship, rest, and worship with family. We
+                recharge our hearts on Sunday so we can serve you with even more joy from Monday to Saturday!
+              </p>
+            </div>
           </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            {[
-              { name: 'Home-made Chicken Lumpia', description: 'Served with our signature sauce' },
-              { name: 'Special Siomai', description: 'Ask about our specials' },
-              { name: 'Ice-Cold Lemon Soda', description: 'Perfect for hot days' },
-            ].map((item, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.1 }}
-                className="border-l-2 border-[#a04527] pl-6"
-              >
-                <h4 className="text-xl font-bold text-slate-900 mb-2">{item.name}</h4>
-                <p className="text-slate-600">{item.description}</p>
-              </motion.div>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -313,12 +353,12 @@ export default function XandersLechon() {
           >
             <h2 className="text-5xl md:text-7xl font-bold text-slate-900">Customer Reviews</h2>
 
-            <div className="border-l-4 border-[#a04527] pl-8 py-4">
+            <div className="border-l-4 border-[#d0d91b] pl-8 py-4">
               <p className="text-2xl md:text-3xl text-slate-700 mb-8 leading-relaxed italic">
-                "Twice na akong nakabili ng kanilang letsong manok. Masarap naman!"
+                "Best milktea in town! The creaminess is just right and the flavors are amazing."
               </p>
               <div>
-                <p className="text-lg font-bold text-slate-900">Mercedita S.</p>
+                <p className="text-lg font-bold text-slate-900">Maria C.</p>
                 <p className="text-slate-600">Regular Customer</p>
               </div>
             </div>
@@ -337,42 +377,26 @@ export default function XandersLechon() {
           >
             <h2 className="text-5xl md:text-7xl font-bold text-slate-900 mb-6">Visit Us</h2>
             <p className="text-xl text-slate-600 max-w-3xl">
-              Drop by either of our two branches in Calapan City, or send us a message on Facebook for
-              delivery.
+              Drop by our store in Urdaneta City, or send us a message on Facebook for any inquiries.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            {[
-              {
-                name: 'Nuciti Central Mall',
-                location: 'Food Hall (Near Supermarket), Nuciti Central Mall, Calapan City',
-              },
-              {
-                name: 'Comunal',
-                location: 'Barangay Comunal, Calapan City, Oriental Mindoro 5200',
-                note: 'Tapat ng New Creation Bakery',
-              },
-            ].map((branch, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.1 }}
-                className="space-y-4"
-              >
-                <h3 className="text-3xl font-bold text-slate-900">{branch.name}</h3>
-                <p className="text-lg text-slate-600 leading-relaxed">{branch.location}</p>
-                {branch.note && <p className="text-[#a04527] font-medium">{branch.note}</p>}
-              </motion.div>
-            ))}
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="space-y-4"
+          >
+            <h3 className="text-3xl font-bold text-slate-900">Urdaneta City</h3>
+            <p className="text-lg text-slate-600 leading-relaxed">
+              Zone 2 Pedro T. Orata (Bactad), Urdaneta City, Pangasinan, Philippines
+            </p>
+          </motion.div>
         </div>
       </section>
 
       {/* Store Hours & Contact */}
-      <section id="contact" className="py-32 bg-[#a04527] text-white">
+      <section id="contact" className="py-32 bg-[#94a036] text-white">
         <div className="max-w-5xl mx-auto px-6 lg:px-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -381,9 +405,9 @@ export default function XandersLechon() {
             className="mb-16"
           >
             <h2 className="text-5xl md:text-7xl font-bold mb-8">Contact Us</h2>
-            <p className="text-3xl md:text-4xl font-light mb-6">Open 24/7</p>
+            <p className="text-3xl md:text-4xl font-light mb-6">Open Monday - Saturday</p>
             <p className="text-xl text-white/90 max-w-2xl">
-              Message our Facebook Page to place an order for delivery or for any inquiries.
+              Message our Facebook Page or give us a call for any inquiries or orders.
             </p>
           </motion.div>
 
@@ -396,7 +420,7 @@ export default function XandersLechon() {
           >
             <a
               href="#"
-              className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-white hover:bg-gray-100 text-[#a04527] font-semibold transition-colors duration-300"
+              className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-white hover:bg-gray-100 text-[#94a036] font-semibold transition-colors duration-300"
             >
               <MessageCircle size={24} />
               <span className="text-lg">Message on Facebook</span>
@@ -422,13 +446,12 @@ export default function XandersLechon() {
           >
             <div className="flex flex-wrap gap-4">
               {[
-                '#XandersLechon',
-                '#MasarapAffordableQuality',
-                '#LechonManok',
-                '#PorkLiempo',
-                '#CalapanCity',
+                '#IAmMilktea',
+                '#MilkteaLover',
+                '#UrdanetaCity',
+                '#DailyDoseOfJoy',
               ].map((tag) => (
-                <span key={tag} className="text-slate-400 text-sm">
+                <span key={tag} className="text-slate-400 text-lg">
                   {tag}
                 </span>
               ))}
@@ -442,8 +465,8 @@ export default function XandersLechon() {
         <div className="max-w-6xl mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
             <div>
-              <h3 className="text-2xl font-bold mb-3">Xander's Lechon</h3>
-              <p className="text-slate-400">Masarap. Affordable. Quality.</p>
+              <h3 className="text-2xl font-bold mb-3">I AM MILKTEA</h3>
+              <p className="text-slate-400">"I Am... Milktea. I Am your daily dose of Joy."</p>
             </div>
             <div>
               <h4 className="font-semibold mb-4">Quick Links</h4>
@@ -457,15 +480,15 @@ export default function XandersLechon() {
               </div>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">Locations</h4>
+              <h4 className="font-semibold mb-4">Location</h4>
               <div className="space-y-2 text-slate-400">
-                <p>Nuciti Central Mall</p>
-                <p>Barangay Comunal</p>
+                <p>Zone 2 Pedro T. Orata (Bactad)</p>
+                <p>Urdaneta City, Pangasinan</p>
               </div>
             </div>
           </div>
           <div className="border-t border-slate-800 pt-8 text-slate-500 text-sm">
-            <p>&copy; 2026 Xander's Lechon & Meals. All rights reserved.</p>
+            <p>&copy; 2026 I AM MILKTEA. All rights reserved.</p>
           </div>
         </div>
       </footer>
