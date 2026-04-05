@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, TrendingUp, Users, Award, Coffee, CakeSlice, Drumstick, MessageCircle, Phone } from 'lucide-react';
+import { ArrowRight, TrendingUp, Users, Award, Coffee, CakeSlice, Drumstick, MessageCircle, Phone, ChevronLeft, ChevronRight } from 'lucide-react';
+import { useState, useEffect } from 'react';
 
 const brands = [
   { id: 'i-am-milktea', name: 'I AM MILKTEA', tagline: '"I Am... Milktea. I Am your daily dose of Joy."', icon: Coffee, color: 'lime' },
@@ -8,14 +9,31 @@ const brands = [
   { id: 'xanders-roasted', name: "Xander's Lechon", tagline: '"Masarap. Affordable. Quality."', icon: Drumstick, color: 'rose' },
 ];
 
+const givingBackImages = [
+  'src/assets/mainPage/giving back 1.jpg',
+  'src/assets/mainPage/giving back 2.jpg',
+  'src/assets/mainPage/giving back 3.jpg',
+];
+
 export default function Home() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % givingBackImages.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
+  const goToPrev = () => setCurrentSlide((prev) => (prev - 1 + givingBackImages.length) % givingBackImages.length);
+  const goToNext = () => setCurrentSlide((prev) => (prev + 1) % givingBackImages.length);
   return (
     <div>
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src="src/assets/cover photo.png" 
+            src="src/assets/mainPage/cover photo.png" 
             alt="Corporate Background" 
             className="w-full h-full object-cover"
             referrerPolicy="no-referrer"
@@ -33,7 +51,7 @@ export default function Home() {
             <img 
               src="src/assets/logo.png" 
               alt="528 Royal Crown Logo" 
-              className="h-70 md:h-75 object-contain mx-auto"
+              className="h-55 md:h-75 object-contain mx-auto"
             />
           </motion.div>
 
@@ -89,6 +107,134 @@ export default function Home() {
             </p>
             <p className="text-3xl md:text-4xl font-bold text-[#fdd304] mt-6">Deuteronomy 28:13</p>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Our Origins */}
+      <section className="py-15 bg-[#f8f7f4]">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+          
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="relative"
+            >
+              <div className="relative overflow-hidden rounded-3xl shadow-2xl">
+                <img 
+                  src="src/assets/mainPage/old bakery pic.jpg"
+                  alt="Our first bakery in the 1970s"
+                  className="w-full h-auto sepia-[30%]"
+                  referrerPolicy="no-referrer"
+                />
+                <div className="absolute bottom-6 left-6">
+                  <span className="px-4 py-2 bg-[#8e180d] text-white font-semibold rounded-full text-sm">
+                    Est. 1970s
+                  </span>
+                </div>
+              </div>
+              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-[#fdd304] rounded-2xl -z-10 opacity-50" />
+              <div className="absolute -top-6 -left-6 w-24 h-24 bg-slate-200 rounded-2xl -z-10 opacity-50" />
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="space-y-8"
+            >
+              <div>
+                <h3 className="text-3xl font-bold text-slate-900 mb-4">A Legacy Born from Faith & Hard Work</h3>
+                <p className="text-lg text-slate-600 leading-relaxed">
+                  What started as a humble bakery in Bangued, Abra by the De Guzman family has blossomed into a thriving enterprise spanning three generations. Our journey is a testament to the power of faith, perseverance, and a commitment to excellence. From our first oven to our current portfolio of successful franchises, we have remained true to our core values and dedication to quality.
+                </p>
+              </div>
+
+            
+
+              <p className="text-xl font-light text-slate-700 italic">
+                "Tested through time, proven by generations"
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Giving Back */}
+      <section className="py-32 bg-[#8e180d] text-white">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            {/* Text - Left Side */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="space-y-8"
+            >
+              <h2 className="text-5xl md:text-7xl font-bold">Returning Our Blessings</h2>
+              <p className="text-xl text-white/80 leading-relaxed">
+                We believe that true success is measured not just by profits, but by the positive impact we make in our communities. We are committed to giving back and lifting others up.
+              </p>
+              <p className="text-2xl md:text-3xl font-light italic">
+                "To whom much is given, much is expected"
+              </p>
+              <p className="text-white/60">Luke 12:48</p>
+            </motion.div>
+
+            {/* Carousel - Right Side */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="relative"
+            >
+              <div className="aspect-[4/3] bg-slate-700 rounded-2xl overflow-hidden relative">
+                {givingBackImages.map((src, idx) => (
+                  <motion.img
+                    key={idx}
+                    src={src}
+                    alt={`Community activity ${idx + 1}`}
+                    className="absolute inset-0 w-full h-full object-cover"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: idx === currentSlide ? 1 : 0 }}
+                    transition={{ duration: 1 }}
+                    referrerPolicy="no-referrer"
+                  />
+                ))}
+                
+                {/* Carousel Controls */}
+                <button
+                  onClick={goToPrev}
+                  className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/30 p-3 rounded-full backdrop-blur-sm transition-colors"
+                >
+                  <ChevronLeft className="text-white" size={24} />
+                </button>
+                <button
+                  onClick={goToNext}
+                  className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/30 p-3 rounded-full backdrop-blur-sm transition-colors"
+                >
+                  <ChevronRight className="text-white" size={24} />
+                </button>
+
+                {/* Carousel Dots */}
+                <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+                  {givingBackImages.map((_, idx) => (
+                    <button
+                      key={idx}
+                      onClick={() => setCurrentSlide(idx)}
+                      className={`h-2 rounded-full transition-all ${
+                        idx === currentSlide ? 'bg-white w-8' : 'bg-white/40 w-2 hover:bg-white/60'
+                      }`}
+                    />
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
@@ -236,48 +382,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-16 bg-slate-900 text-white border-t border-slate-800">
-        <div className="max-w-6xl mx-auto px-6 lg:px-12">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
-            <div>
-              <img
-                src="https://picsum.photos/seed/528logo/200/60"
-                alt="528 Royal Crown Logo"
-                className="h-12 object-contain mb-3"
-              />
-              <p className="text-slate-400">Building Brands, Empowering Futures.</p>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Quick Links</h4>
-              <div className="space-y-2">
-                <Link to="/franchise-opportunities" className="block text-slate-400 hover:text-white transition-colors">
-                  Franchise Opportunities
-                </Link>
-                <Link to="/i-am-milktea" className="block text-slate-400 hover:text-white transition-colors">
-                  I AM MILKTEA
-                </Link>
-                <Link to="/517-bakery" className="block text-slate-400 hover:text-white transition-colors">
-                  517 Bakery
-                </Link>
-                <Link to="/xanders-roasted" className="block text-slate-400 hover:text-white transition-colors">
-                  Xander's Lechon
-                </Link>
-              </div>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Contact</h4>
-              <div className="space-y-2 text-slate-400">
-                <p>528 Royal Care</p>
-                <p>Philippines</p>
-              </div>
-            </div>
-          </div>
-          <div className="border-t border-slate-800 pt-8 text-slate-500 text-sm">
-            <p>&copy; 2026 528 Royal Care. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+   
     </div>
   );
 }

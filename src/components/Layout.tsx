@@ -1,5 +1,5 @@
 import { Link, Outlet, useLocation } from 'react-router-dom';
-import { Crown, Menu, X, ChevronRight } from 'lucide-react';
+import { Menu, X, ChevronRight } from 'lucide-react';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 
@@ -18,10 +18,12 @@ export default function Layout() {
       <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
-            <Link to="/" className="flex items-center gap-2 group">
-              <div className="bg-amber-500 p-2 rounded-lg text-white group-hover:bg-amber-600 transition-colors">
-                <Crown size={24} />
-              </div>
+            <Link to="/" className="flex items-center gap-3 group">
+              <img 
+                src="src/assets/logo.png" 
+                alt="528 Royal Care" 
+                className="h-10 w-auto"
+              />
               <span className="font-bold text-xl tracking-tight">528 Royal Care</span>
             </Link>
 
@@ -103,10 +105,12 @@ export default function Layout() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="col-span-1 md:col-span-2">
               <Link to="/" className="flex items-center gap-2 mb-4">
-                <div className="bg-amber-500 p-1.5 rounded-md text-white">
-                  <Crown size={20} />
-                </div>
-                <span className="font-bold text-xl text-white tracking-tight">528 Royal Care</span>
+                <img 
+                  src="src/assets/logo.png" 
+                  alt="528 Royal Care" 
+                  className="h-8 w-auto"
+                />
+                <span className="font-bold text-lg text-white tracking-tight">528 Royal Care</span>
               </Link>
               <p className="text-sm max-w-md">
                 Empowering entrepreneurs through exceptional franchise opportunities. We build brands that communities love.

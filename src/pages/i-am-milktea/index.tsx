@@ -1,4 +1,5 @@
 import { motion } from 'motion/react';
+import { Helmet } from 'react-helmet-async';
 import { MapPin, Phone, Mail, Clock, Coffee, Tag, Heart, ChevronLeft, ChevronRight, MessageCircle, Users, Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Crown } from 'lucide-react';
@@ -26,6 +27,10 @@ export default function IAmMilktea() {
 
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>I AM MILKTEA</title>
+        <link rel="icon" type="image/png" href="/src/assets/iAmMilktea/iammilktea-logo.png?v=milktea" />
+      </Helmet>
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">

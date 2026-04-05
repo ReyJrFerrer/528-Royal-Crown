@@ -1,4 +1,5 @@
 import { motion } from 'motion/react';
+import { Helmet } from 'react-helmet-async';
 import { ChevronLeft, ChevronRight, MessageCircle,  Phone } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
@@ -24,6 +25,10 @@ export default function XandersLechon() {
 
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>Xander's Lechon and Meals-On-The-Go</title>
+        <link rel="icon" type="image/png" href="/src/assets/xandersLechon/xandersLechon-logo.png?v=xanders" />
+      </Helmet>
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">

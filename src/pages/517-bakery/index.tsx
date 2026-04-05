@@ -1,4 +1,5 @@
 import { motion } from 'motion/react';
+import { Helmet } from 'react-helmet-async';
 import { MapPin, Phone, Clock, CakeSlice, ChevronLeft, ChevronRight, MessageCircle, Star, Users, Sparkles, Truck, Heart } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
@@ -24,6 +25,10 @@ export default function Bakery517() {
 
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>New Creation 517 Bakery</title>
+        <link rel="icon" type="image/png" href="/src/assets/517bakery/517Bakery-logo.png?v=bakery" />
+      </Helmet>
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
