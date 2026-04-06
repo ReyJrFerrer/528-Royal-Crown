@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { Helmet } from 'react-helmet-async';
 import { MapPin, Phone, Clock, CakeSlice, ChevronLeft, ChevronRight, MessageCircle, Star, Users, Sparkles, Truck, Heart } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
 import logo517 from '@/assets/517bakery/517Bakery-logo.png';
@@ -92,13 +93,13 @@ export default function Bakery517() {
             >
               <a
                 href="#cakes"
-                className="px-10 py-4 bg-[#fe023c] hover:bg-[#e0012f] text-white font-semibold transition-colors duration-300"
+                className="px-10 py-4 bg-[#fe023c] hover:bg-[#e0012f] text-white font-semibold transition-colors duration-300 rounded-xl"
               >
                 View Menu
               </a>
               <a
                 href="#contact"
-                className="px-10 py-4 bg-white hover:bg-gray-100 text-[#8e180d] font-semibold transition-colors duration-300"
+                className="px-10 py-4 bg-white hover:bg-gray-100 text-[#8e180d] font-semibold transition-colors duration-300 rounded-xl"
               >
                 Order Now
               </a>
@@ -117,7 +118,7 @@ export default function Bakery517() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="relative overflow-hidden aspect-[4/3] order-2 lg:order-1"
+              className="relative overflow-hidden aspect-[4/3] order-2 lg:order-1 rounded-2xl bg-slate-700"
             >
               {heroImages.map((src, idx) => (
                 <motion.img
@@ -135,15 +136,15 @@ export default function Bakery517() {
               {/* Carousel Controls */}
               <button
                 onClick={goToPrev}
-                className="absolute left-6 top-1/2 -translate-y-1/2 z-20 bg-white/95 hover:bg-white p-4 transition-colors"
+                className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/30 p-3 rounded-full backdrop-blur-sm transition-colors"
               >
-                <ChevronLeft className="text-slate-900" size={20} />
+                <ChevronLeft className="text-white" size={20} />
               </button>
               <button
                 onClick={goToNext}
-                className="absolute right-6 top-1/2 -translate-y-1/2 z-20 bg-white/95 hover:bg-white p-4 transition-colors"
+                className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/30 p-3 rounded-full backdrop-blur-sm transition-colors"
               >
-                <ChevronRight className="text-slate-900" size={20} />
+                <ChevronRight className="text-white" size={20} />
               </button>
 
               {/* Carousel Dots */}
@@ -152,7 +153,7 @@ export default function Bakery517() {
                   <button
                     key={idx}
                     onClick={() => goToSlide(idx)}
-                    className={`h-1.5 transition-all ${
+                    className={`h-1.5 rounded-full transition-all ${
                       idx === currentSlide ? 'bg-[#fdd304] w-10' : 'bg-white/50 w-1.5 hover:bg-white/75'
                     }`}
                   />
@@ -246,7 +247,7 @@ export default function Bakery517() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.05 }}
-                className="bg-[#f8f7f4] p-8 rounded-2xl hover:shadow-xl transition-shadow"
+                className="bg-white/80 p-8 rounded-2xl hover:shadow-xl transition-shadow"
               >
                 <CakeSlice className="text-[#cc8d2b] mb-4" size={32} />
                 <h4 className="text-2xl font-bold text-slate-900 mb-2">{item.name}</h4>
@@ -292,7 +293,7 @@ export default function Bakery517() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.05 }}
-                className="bg-white p-8 rounded-2xl hover:shadow-xl transition-shadow"
+                className="bg-white/80 p-8 rounded-2xl hover:shadow-xl transition-shadow"
               >
                 <h4 className="text-2xl font-bold text-slate-900 mb-2">{item.name}</h4>
                 <p className="text-slate-600">{item.description}</p>
@@ -396,7 +397,7 @@ export default function Bakery517() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                className="bg-[#f8f7f4] p-8 rounded-2xl"
+                className="bg-white/80 p-8 rounded-2xl"
               >
                 <MapPin className="text-[#fe023c] mb-4" size={24} />
                 <h3 className="text-xl font-bold text-slate-900 mb-2">{branch.name}</h3>
@@ -432,11 +433,15 @@ export default function Bakery517() {
             </p>
               <p className="text-xl text-white/90 max-w-2xl">
               Email Address: zaratejandadale15@gmail.com
+
+              <br/>
+                 <span className="text-[#fdd304] font-semibold">
+              Interested in franchising? <Link to="/franchise-opportunities" className="underline hover:text-white">Learn more about owning your own store!</Link>
+            </span>
             </p>
+          
             <br />
-            <p className="text-[#fdd304] font-semibold">
-              Interested in franchising? <a href="/franchise-opportunities" className="underline hover:text-white">Learn more about owning your own store!</a>
-            </p>
+           
           </motion.div>
 
           <motion.div
@@ -448,14 +453,14 @@ export default function Bakery517() {
           >
             <a
               href="https://www.facebook.com/NC517"
-              className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-[#fe023c] hover:bg-[#e0012f] text-white font-semibold transition-colors duration-300"
+              className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-[#fe023c] hover:bg-[#e0012f] text-white font-semibold transition-colors duration-300 rounded-xl"
             >
               <MessageCircle size={24} />
               <span className="text-lg">Message on Facebook</span>
             </a>
             <a
               href="tel:+639397535636"
-              className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-white hover:bg-gray-100 text-[#8e180d] font-semibold transition-colors duration-300"
+              className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-white hover:bg-gray-100 text-[#8e180d] font-semibold transition-colors duration-300 rounded-xl"
             >
               <Phone size={24} />
               <span className="text-lg">Call Us</span>

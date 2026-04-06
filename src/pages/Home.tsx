@@ -87,13 +87,13 @@ export default function Home() {
           >
             <Link 
               to="/franchise-opportunities" 
-              className="px-10 py-4 bg-[#fe023c] hover:bg-[#e0012f] text-white font-semibold transition-colors duration-300"
+              className="px-10 py-4 bg-[#fe023c] hover:bg-[#e0012f] text-white font-semibold transition-colors duration-300 rounded-xl"
             >
               Explore Franchises
             </Link>
             <a 
               href="#our-brands" 
-              className="px-10 py-4 bg-white hover:bg-gray-100 text-[#8e180d] font-semibold transition-colors duration-300"
+              className="px-10 py-4 bg-white hover:bg-gray-100 text-[#8e180d] font-semibold transition-colors duration-300 rounded-xl"
             >
               View Our Brands
             </a>
@@ -273,7 +273,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                className="bg-[#f8f7f4] p-10 hover:shadow-xl transition-shadow"
+                className="bg-white/80 p-10 hover:shadow-xl transition-shadow rounded-2xl"
               >
                 <div className="w-14 h-14 bg-[#8e180d]/10 text-[#8e180d] rounded-xl flex items-center justify-center mb-6">
                   <feature.icon size={28} />
@@ -315,7 +315,7 @@ export default function Home() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: idx * 0.1, duration: 0.5 }}
-                  className="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 border border-slate-100 flex flex-col"
+                  className="group bg-white/80 rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 border border-slate-100 flex flex-col rounded-2xl"
                 >
                   <div className="relative h-64 overflow-hidden">
                     <img 
@@ -376,14 +376,14 @@ export default function Home() {
           >
             <Link
               to="/franchise-opportunities"
-              className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-[#fe023c] hover:bg-[#e0012f] text-white font-semibold transition-colors duration-300"
+              className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-[#fe023c] hover:bg-[#e0012f] text-white font-semibold transition-colors duration-300 rounded-xl"
             >
               <MessageCircle size={24} />
               <span className="text-lg">Inquire Now</span>
             </Link>
             <a
               href="tel:+639123456789"
-              className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-white hover:bg-gray-100 text-[#8e180d] font-semibold transition-colors duration-300"
+              className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-white hover:bg-gray-100 text-[#8e180d] font-semibold transition-colors duration-300 rounded-xl"
             >
               <Phone size={24} />
               <span className="text-lg">Call Us</span>

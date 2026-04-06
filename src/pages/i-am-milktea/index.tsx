@@ -86,13 +86,13 @@ export default function IAmMilktea() {
             >
               <a
                 href="#menu"
-                className="px-10 py-4 bg-[#d0d91b] hover:bg-[#b8c015] text-[white] font-semibold transition-colors duration-300"
+                className="px-10 py-4 bg-[#94a036] hover:bg-[#b8c015] text-[white] font-semibold transition-colors duration-300 rounded-xl"
               >
                 View Menu
               </a>
               <a
                 href="mailto:info@iammilktea.com"
-                className="px-10 py-4 bg-white hover:bg-gray-100 text-[#94a036] font-semibold transition-colors duration-300"
+                className="px-10 py-4 bg-white hover:bg-gray-100 text-[#94a036] font-semibold transition-colors duration-300 rounded-xl"
               >
                 Email Us
               </a>
@@ -113,44 +113,46 @@ export default function IAmMilktea() {
               transition={{ duration: 0.8 }}
               className="relative overflow-hidden aspect-[4/3] order-2 lg:order-1"
             >
-              {heroImages.map((src, idx) => (
-                <motion.img
-                  key={idx}
-                  src={src}
-                  alt={`I AM MILKTEA ${idx + 1}`}
-                  className="absolute inset-0 w-full h-full object-cover"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: idx === currentSlide ? 1 : 0 }}
-                  transition={{ duration: 1.2 }}
-                  referrerPolicy="no-referrer"
-                />
-              ))}
-
-              {/* Carousel Controls */}
-              <button
-                onClick={goToPrev}
-                className="absolute left-6 top-1/2 -translate-y-1/2 z-20 bg-white/95 hover:bg-white p-4 transition-colors"
-              >
-                <ChevronLeft className="text-slate-900" size={20} />
-              </button>
-              <button
-                onClick={goToNext}
-                className="absolute right-6 top-1/2 -translate-y-1/2 z-20 bg-white/95 hover:bg-white p-4 transition-colors"
-              >
-                <ChevronRight className="text-slate-900" size={20} />
-              </button>
-
-              {/* Carousel Dots */}
-              <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-3">
-                {heroImages.map((_, idx) => (
-                  <button
+              <div className="bg-slate-700 rounded-2xl overflow-hidden relative h-full">
+                {heroImages.map((src, idx) => (
+                  <motion.img
                     key={idx}
-                    onClick={() => goToSlide(idx)}
-                    className={`h-1.5 transition-all ${
-                      idx === currentSlide ? 'bg-[#d0d91b] w-10' : 'bg-white/50 w-1.5 hover:bg-white/75'
-                    }`}
+                    src={src}
+                    alt={`I AM MILKTEA ${idx + 1}`}
+                    className="absolute inset-0 w-full h-full object-cover"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: idx === currentSlide ? 1 : 0 }}
+                    transition={{ duration: 1.2 }}
+                    referrerPolicy="no-referrer"
                   />
                 ))}
+
+                {/* Carousel Controls */}
+                <button
+                  onClick={goToPrev}
+                  className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/30 p-3 rounded-full backdrop-blur-sm transition-colors"
+                >
+                  <ChevronLeft className="text-white" size={24} />
+                </button>
+                <button
+                  onClick={goToNext}
+                  className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/30 p-3 rounded-full backdrop-blur-sm transition-colors"
+                >
+                  <ChevronRight className="text-white" size={24} />
+                </button>
+
+                {/* Carousel Dots */}
+                <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+                  {heroImages.map((_, idx) => (
+                    <button
+                      key={idx}
+                      onClick={() => goToSlide(idx)}
+                      className={`h-2 rounded-full transition-all ${
+                        idx === currentSlide ? 'bg-[#d0d91b] w-8' : 'bg-white/40 w-2 hover:bg-white/60'
+                      }`}
+                    />
+                  ))}
+                </div>
               </div>
             </motion.div>
 
@@ -226,7 +228,7 @@ export default function IAmMilktea() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-slate-200">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               { size: 'Small', volume: '12 oz', price: 'From ₱45', description: 'Perfect for a quick treat' },
               { size: 'Medium', volume: '16 oz',price: 'From ₱60', description: 'The classic choice' },
@@ -238,7 +240,7 @@ export default function IAmMilktea() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.05 }}
-                className="bg-white p-10 hover:bg-[#f8f7f4] transition-colors duration-300"
+                className="bg-white/80 p-10 hover:shadow-xl transition-shadow rounded-2xl"
               >
                 <h4 className="text-2xl font-bold text-slate-900 mb-2">{item.size}</h4>
                 <p className="text-slate-500 mb-4">{item.volume}</p>
@@ -273,7 +275,7 @@ export default function IAmMilktea() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="bg-white p-12 hover:bg-white/80 transition-colors duration-300"
+              className="bg-white/80 p-12 hover:shadow-xl transition-shadow rounded-2xl"
             >
               <div className="flex items-center gap-3 mb-4">
                 <Users className="text-[#d0d91b]" size={28} />
@@ -290,7 +292,7 @@ export default function IAmMilktea() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="bg-white p-12 hover:bg-white/80 transition-colors duration-300"
+              className="bg-white/80 p-12 hover:shadow-xl transition-shadow rounded-2xl"
             >
               <div className="flex items-center gap-3 mb-4">
                 <Tag className="text-[#d0d91b]" size={28} />
@@ -336,7 +338,7 @@ export default function IAmMilktea() {
               At I AM MILKTEA, we believe that just as a good cup of tea needs time to steep, we also need
               time to rest and reconnect.
             </p>
-            <div className="bg-[#f8f7f4] rounded-3xl p-12 shadow-lg border border-slate-100 max-w-2xl mx-auto">
+            <div className="bg-[#f8f7f4] p-12 shadow-lg border border-slate-100 max-w-2xl mx-auto rounded-2xl">
               <h3 className="text-2xl font-bold text-[#d5261e] mb-4">Sunday Rest Day</h3>
               <p className="text-slate-600 italic mb-4 text-lg">Psalm 136:1 - "Give thanks to the Lord for He is good. His love endures forever."</p>
               <p className="text-slate-600 text-lg">
@@ -416,7 +418,7 @@ export default function IAmMilktea() {
             <p className="text-xl text-white/90 max-w-2xl">
               Message our Facebook Page or give us a call for any inquiries or orders.
               <br />
-              <span className="text-[#d0d91b] font-semibold">
+              <span className="text-[#dfe83e] font-semibold">
                 Interested in franchising? <Link to="/franchise-opportunities" className="underline hover:text-white">Learn more about owning your own store!</Link>
               </span>
             </p>
@@ -431,14 +433,14 @@ export default function IAmMilktea() {
           >
             <a
               href="https://www.facebook.com/IAmMilkteaUrdaneta"
-              className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-white hover:bg-gray-100 text-[#94a036] font-semibold transition-colors duration-300"
+              className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-white hover:bg-gray-100 text-[#94a036] font-semibold transition-colors duration-300 rounded-xl"
             >
               <MessageCircle size={24} />
               <span className="text-lg">Message on Facebook</span>
             </a>
             <a
               href="tel:+639123456789"
-              className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-transparent hover:bg-white/10 text-white font-semibold border-2 border-white transition-colors duration-300"
+              className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-transparent hover:bg-white/10 text-white font-semibold border-2 border-white transition-colors duration-300 rounded-xl"
             >
               <Phone size={24} />
               <span className="text-lg">Email Us</span>

@@ -84,13 +84,13 @@ export default function XandersLechon() {
             >
               <a
                 href="#menu"
-                className="px-10 py-4 bg-[#a04527] hover:bg-[#8b3a1f] text-white font-semibold transition-colors duration-300"
+                className="px-10 py-4 bg-[#a04527] hover:bg-[#8b3a1f] text-white font-semibold transition-colors duration-300 rounded-xl"
               >
                 View Menu
               </a>
               <a
                 href="#contact"
-                className="px-10 py-4 bg-white hover:bg-gray-100 text-[#a04527] font-semibold transition-colors duration-300"
+                className="px-10 py-4 bg-white hover:bg-gray-100 text-[#a04527] font-semibold transition-colors duration-300 rounded-xl"
               >
                 Order Now
               </a>
@@ -111,44 +111,46 @@ export default function XandersLechon() {
               transition={{ duration: 0.8 }}
               className="relative overflow-hidden aspect-[4/3] order-2 lg:order-1"
             >
-              {heroImages.map((src, idx) => (
-                <motion.img
-                  key={idx}
-                  src={src}
-                  alt={`Xander's Lechon ${idx + 1}`}
-                  className="absolute inset-0 w-full h-full object-cover"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: idx === currentSlide ? 1 : 0 }}
-                  transition={{ duration: 1.2 }}
-                  referrerPolicy="no-referrer"
-                />
-              ))}
-
-              {/* Carousel Controls */}
-              <button
-                onClick={goToPrev}
-                className="absolute left-6 top-1/2 -translate-y-1/2 z-20 bg-white/95 hover:bg-white p-4 transition-colors"
-              >
-                <ChevronLeft className="text-slate-900" size={20} />
-              </button>
-              <button
-                onClick={goToNext}
-                className="absolute right-6 top-1/2 -translate-y-1/2 z-20 bg-white/95 hover:bg-white p-4 transition-colors"
-              >
-                <ChevronRight className="text-slate-900" size={20} />
-              </button>
-
-              {/* Carousel Dots */}
-              <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-3">
-                {heroImages.map((_, idx) => (
-                  <button
+              <div className="bg-slate-700 rounded-2xl overflow-hidden relative h-full">
+                {heroImages.map((src, idx) => (
+                  <motion.img
                     key={idx}
-                    onClick={() => goToSlide(idx)}
-                    className={`h-1.5 transition-all ${
-                      idx === currentSlide ? 'bg-white w-10' : 'bg-white/50 w-1.5 hover:bg-white/75'
-                    }`}
+                    src={src}
+                    alt={`Xander's Lechon ${idx + 1}`}
+                    className="absolute inset-0 w-full h-full object-cover"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: idx === currentSlide ? 1 : 0 }}
+                    transition={{ duration: 1.2 }}
+                    referrerPolicy="no-referrer"
                   />
                 ))}
+
+                {/* Carousel Controls */}
+                <button
+                  onClick={goToPrev}
+                  className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/30 p-3 rounded-full backdrop-blur-sm transition-colors"
+                >
+                  <ChevronLeft className="text-white" size={24} />
+                </button>
+                <button
+                  onClick={goToNext}
+                  className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/30 p-3 rounded-full backdrop-blur-sm transition-colors"
+                >
+                  <ChevronRight className="text-white" size={24} />
+                </button>
+
+                {/* Carousel Dots */}
+                <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+                  {heroImages.map((_, idx) => (
+                    <button
+                      key={idx}
+                      onClick={() => goToSlide(idx)}
+                      className={`h-2 rounded-full transition-all ${
+                        idx === currentSlide ? 'bg-[#a04527] w-8' : 'bg-white/40 w-2 hover:bg-white/60'
+                      }`}
+                    />
+                  ))}
+                </div>
               </div>
             </motion.div>
 
@@ -212,7 +214,7 @@ export default function XandersLechon() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-slate-200">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               { name: 'Pork Liempo', price: '₱310', description: 'Tender and juicy' },
               { name: 'Lechon Manok (Regular)', price: '₱290', description: 'Classic favorite' },
@@ -225,7 +227,7 @@ export default function XandersLechon() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.05 }}
-                className="bg-white p-10 hover:bg-[#f8f7f4] transition-colors duration-300"
+                className="bg-white/80 p-10 hover:shadow-xl transition-shadow rounded-2xl"
               >
                 <h4 className="text-2xl font-bold text-slate-900 mb-2">{item.name}</h4>
                 <p className="text-slate-500 mb-4">{item.description}</p>
@@ -251,7 +253,7 @@ export default function XandersLechon() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               { name: 'Spicy Garlic Chicken Meal', price: '₱60' },
               { name: 'Crispy Leeg Meal', price: '₱50' },
@@ -262,7 +264,7 @@ export default function XandersLechon() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                className="bg-white p-12 hover:bg-white/80 transition-colors duration-300"
+                className="bg-white/80 p-12 hover:shadow-xl transition-shadow rounded-2xl"
               >
                 <h4 className="text-3xl font-bold text-slate-900 mb-6">{meal.name}</h4>
                 <p className="text-6xl font-bold text-[#a04527]">{meal.price}</p>
@@ -287,7 +289,7 @@ export default function XandersLechon() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               { name: 'Home-made Chicken Lumpia', description: 'Served with our signature sauce' },
               { name: 'Special Siomai', description: 'Ask about our specials' },
@@ -299,7 +301,7 @@ export default function XandersLechon() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                className="border-l-2 border-[#a04527] pl-6"
+                className="bg-white/80 p-8 hover:shadow-xl transition-shadow rounded-2xl"
               >
                 <h4 className="text-xl font-bold text-slate-900 mb-2">{item.name}</h4>
                 <p className="text-slate-600">{item.description}</p>
@@ -407,14 +409,14 @@ export default function XandersLechon() {
           >
             <a
               href="#"
-              className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-white hover:bg-gray-100 text-[#a04527] font-semibold transition-colors duration-300"
+              className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-white hover:bg-gray-100 text-[#a04527] font-semibold transition-colors duration-300 rounded-xl"
             >
               <MessageCircle size={24} />
               <span className="text-lg">Message on Facebook</span>
             </a>
             <a
               href="tel:+639123456789"
-              className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-transparent hover:bg-white/10 text-white font-semibold border-2 border-white transition-colors duration-300"
+              className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-transparent hover:bg-white/10 text-white font-semibold border-2 border-white transition-colors duration-300 rounded-xl"
             >
               <Phone size={24} />
               <span className="text-lg">Call Us</span>

@@ -2,10 +2,12 @@ import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 import { CheckCircle2, ArrowRight, Store, TrendingUp, ShieldCheck, Coffee, CakeSlice, Drumstick } from 'lucide-react';
 
+import iAmMilkteaLogo from '@/assets/iAmMilktea/iammilktea-logo.png';
+import bakery517Logo from '@/assets/517bakery/517Bakery-logo.png';
+import xandersLechonLogo from '@/assets/xandersLechon/xandersLechon-logo.png';
+
 const franchises = [
-  { id: 'i-am-milktea', name: 'I AM MILKTEA', tagline: 'Refreshing moments in every cup.', icon: Coffee, color: 'lime', desc: 'Join the I AM MILKTEA family! We offer comprehensive training, marketing support, and a proven business model for aspiring entrepreneurs.' },
   { id: '517-bakery', name: '517 Bakery', tagline: 'Baked with love, served with a smile.', icon: CakeSlice, color: 'amber', desc: 'Bring the aroma of 517 Bakery to your community. Our franchise program includes recipes, operational guidelines, and ongoing support.' },
-  { id: 'xanders-roasted', name: "Xander's Roasted", tagline: 'Savory perfection in every bite.', icon: Drumstick, color: 'rose', desc: "Start your own Xander's franchise today. Benefit from our established brand, secret recipes, and robust supply chain." },
 ];
 
 export default function FranchiseOpportunities() {
@@ -44,7 +46,7 @@ export default function FranchiseOpportunities() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 + (i * 0.1) }}
-              className="bg-white p-8 rounded-2xl shadow-lg border border-slate-100"
+              className="bg-white/80 p-8 rounded-2xl shadow-lg border border-slate-100"
             >
               <div className="w-12 h-12 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center mb-6">
                 <benefit.icon size={24} />
@@ -63,9 +65,7 @@ export default function FranchiseOpportunities() {
         <div className="space-y-8">
           {franchises.map((franchise, idx) => {
             const heroImages = {
-              'i-am-miltea': 'https://picsum.photos/seed/milktea/600/400',
-              '517-bakery': 'https://picsum.photos/seed/bakery/600/400',
-              'xanders-roasted': 'https://picsum.photos/seed/roastedchicken/600/400',
+              '517-bakery': bakery517Logo,
             };
             
             return (
@@ -74,7 +74,7 @@ export default function FranchiseOpportunities() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-200 flex flex-col md:flex-row"
+              className="bg-white/80 rounded-3xl overflow-hidden shadow-sm border border-slate-200 flex flex-col md:flex-row"
             >
               <div className="md:w-1/3 h-64 md:h-auto relative">
                 <img 
