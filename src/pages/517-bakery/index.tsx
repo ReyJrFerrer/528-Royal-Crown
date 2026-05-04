@@ -91,18 +91,18 @@ export default function Bakery517() {
               transition={{ delay: 0.4, duration: 0.8 }}
               className="flex flex-wrap gap-4 justify-center"
             >
-              <a
-                href="#cakes"
-                className="px-10 py-4 bg-[#fe023c] hover:bg-[#e0012f] text-white font-semibold transition-colors duration-300 rounded-xl"
-              >
-                View Menu
-              </a>
-              <a
-                href="#contact"
-                className="px-10 py-4 bg-white hover:bg-gray-100 text-[#8e180d] font-semibold transition-colors duration-300 rounded-xl"
-              >
-                Order Now
-              </a>
+               <a
+                 href="#cakes"
+                 className="px-10 py-4 bg-[#a3342c] hover:bg-[#8a2b24] text-white font-semibold transition-colors duration-300 rounded-xl"
+               >
+                 View Menu
+               </a>
+               <a
+                 href="#contact"
+                 className="px-10 py-4 bg-white hover:bg-gray-100 text-[#0a714e] font-semibold transition-colors duration-300 rounded-xl"
+               >
+                 Order Now
+               </a>
             </motion.div>
           </div>
         </div>
@@ -184,27 +184,27 @@ export default function Bakery517() {
               </div>
 
               {/* Quick Stats */}
-              <div className="grid grid-cols-3 gap-6 pt-8 border-t border-slate-200">
-                <div>
-                  <div className="text-4xl font-bold text-[#8e180d] mb-2">26</div>
-                  <div className="text-sm text-slate-600">Branches</div>
-                </div>
-                <div>
-                  <div className="text-4xl font-bold text-[#8e180d] mb-2">Free</div>
-                  <div className="text-sm text-slate-600">Delivery</div>
-                </div>
-                <div>
-                  <div className="text-4xl font-bold text-[#8e180d] mb-2">24/7</div>
-                  <div className="text-sm text-slate-600">Open</div>
-                </div>
-              </div>
-            </motion.div>
+               <div className="grid grid-cols-3 gap-6 pt-8 border-t border-[#0a714e]">
+                 <div>
+                   <div className="text-4xl font-bold text-[#0a714e] mb-2">26</div>
+                   <div className="text-sm text-slate-600">Branches</div>
+                 </div>
+                 <div>
+                   <div className="text-4xl font-bold text-[#0a714e] mb-2">Free</div>
+                   <div className="text-sm text-slate-600">Delivery</div>
+                 </div>
+                 <div>
+                   <div className="text-4xl font-bold text-[#0a714e] mb-2">24/7</div>
+                   <div className="text-sm text-slate-600">Open</div>
+                 </div>
+               </div>
+             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Tagline Section */}
-      <section className="py-32 bg-[#8e180d] text-white">
+       {/* Tagline Section */}
+       <section className="py-32 bg-[#0a714e] text-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -249,7 +249,7 @@ export default function Bakery517() {
                 transition={{ delay: idx * 0.05 }}
                 className="bg-white/80 p-8 rounded-2xl hover:shadow-xl transition-shadow"
               >
-                <CakeSlice className="text-[#cc8d2b] mb-4" size={32} />
+                   <CakeSlice className="text-[#a3342c] mb-4" size={32} />
                 <h4 className="text-2xl font-bold text-slate-900 mb-2">{item.name}</h4>
                 <p className="text-slate-600">{item.description}</p>
               </motion.div>
@@ -303,8 +303,8 @@ export default function Bakery517() {
         </div>
       </section>
 
-      {/* Why Choose Us */}
-      <section className="py-32 bg-[#8e180d] text-white">
+       {/* Why Choose Us */}
+       <section className="py-32 bg-[#0a714e] text-white">
         <div className="max-w-6xl mx-auto px-6 lg:px-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -332,7 +332,7 @@ export default function Bakery517() {
                 transition={{ delay: idx * 0.1 }}
                 className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 text-center"
               >
-                <div className="w-16 h-16 mx-auto bg-[#cc8d2b]/20 text-[#cc8d2b] rounded-2xl flex items-center justify-center mb-6">
+                 <div className="w-16 h-16 mx-auto bg-[#fdd304]/20 text-[#fdd304] rounded-2xl flex items-center justify-center mb-6">
                   <item.icon size={32} />
                 </div>
                 <h3 className="text-2xl font-bold mb-3">{item.title}</h3>
@@ -354,7 +354,7 @@ export default function Bakery517() {
           >
             <h2 className="text-5xl md:text-7xl font-bold text-slate-900">Customer Reviews</h2>
 
-            <div className="border-l-4 border-[#8e180d] pl-8 py-4">
+             <div className="border-l-4 border-[#a3342c] pl-8 py-4">
               <p className="text-2xl md:text-3xl text-slate-700 mb-8 leading-relaxed italic">
                 "Apakasarap talaga! Laging bukas ang bakery na 'to. libre pa ang delivery!"
               </p>
@@ -399,7 +399,7 @@ export default function Bakery517() {
                 transition={{ delay: idx * 0.1 }}
                 className="bg-white/80 p-8 rounded-2xl"
               >
-                <MapPin className="text-[#fe023c] mb-4" size={24} />
+                 <MapPin className="text-[#a3342c] mb-4" size={24} />
                 <h3 className="text-xl font-bold text-slate-900 mb-2">{branch.name}</h3>
                 <p className="text-slate-600">{branch.location}</p>
               </motion.div>
@@ -414,8 +414,8 @@ export default function Bakery517() {
         </div>
       </section>
 
-      {/* Store Hours & Contact */}
-      <section id="contact" className="py-32 bg-[#8e180d] text-white">
+       {/* Store Hours & Contact */}
+       <section id="contact" className="py-32 bg-[#0a714e] text-white">
         <div className="max-w-5xl mx-auto px-6 lg:px-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -451,20 +451,20 @@ export default function Bakery517() {
             transition={{ delay: 0.2 }}
             className="flex flex-col sm:flex-row gap-4"
           >
-            <a
-              href="https://www.facebook.com/NC517"
-              className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-[#fe023c] hover:bg-[#e0012f] text-white font-semibold transition-colors duration-300 rounded-xl"
-            >
-              <MessageCircle size={24} />
-              <span className="text-lg">Message on Facebook</span>
-            </a>
-            <Link
-              to="/contact"
-              className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-white hover:bg-gray-100 text-[#8e180d] font-semibold transition-colors duration-300 rounded-xl"
-            >
-              <Phone size={24} />
-              <span className="text-lg">Call Us</span>
-            </Link>
+             <a
+               href="https://www.facebook.com/NC517"
+               className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-[#a3342c] hover:bg-[#8a2b24] text-white font-semibold transition-colors duration-300 rounded-xl"
+             >
+               <MessageCircle size={24} />
+               <span className="text-lg">Message on Facebook</span>
+             </a>
+             <Link
+               to="/contact"
+               className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-white hover:bg-gray-100 text-[#0a714e] font-semibold transition-colors duration-300 rounded-xl"
+             >
+               <Phone size={24} />
+               <span className="text-lg">Call Us</span>
+             </Link>
           </motion.div>
         </div>
       </section>
