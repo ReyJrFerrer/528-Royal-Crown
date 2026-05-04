@@ -98,6 +98,8 @@ export default function Layout() {
                 ))}
                 <div className="h-px bg-slate-100" />
                 <Link to="/franchise-opportunities" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-medium text-slate-800">Franchise Opportunities</Link>
+                <div className="h-px bg-slate-100" />
+                <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-medium text-slate-800">Contact</Link>
               </div>
             </motion.div>
           )}
