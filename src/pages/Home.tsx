@@ -65,8 +65,8 @@ export default function Home() {
             <LazyImage
               src={logo}
               alt="528 Royal Crown Logo"
-              width={300}
-              height={300}
+              width={800}
+              height={800}
               priority
               className="h-48 md:h-75 object-contain mx-auto"
             />

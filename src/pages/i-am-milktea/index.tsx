@@ -99,12 +99,10 @@ export default function IAmMilktea() {
               >
                 View Menu
               </a>
-              <a
-                href="mailto:info@iammilktea.com"
-                className="px-6 py-3 md:px-10 md:py-4 bg-white hover:bg-gray-100 text-[#94a036] font-semibold transition-colors duration-300 rounded-xl text-sm md:text-base"
-              >
-                Email Us
-              </a>
+            <Link to="/contact" className="px-6 py-3 md:px-10 md:py-4 bg-white hover:bg-gray-100 text-[#94a036] font-semibold transition-colors duration-300 rounded-xl text-sm md:text-base">
+         
+              Email Us
+            </Link>
             </motion.div>
           </div>
         </div>
@@ -437,13 +435,11 @@ export default function IAmMilktea() {
               <MessageCircle size={20} />
               <span className="text-base md:text-lg">Message on Facebook</span>
             </a>
-            <a
-              href="tel:+639123456789"
-              className="inline-flex items-center justify-center gap-3 px-6 py-3 md:px-10 md:py-5 bg-transparent hover:bg-white/10 text-white font-semibold border-2 border-white transition-colors duration-300 rounded-xl"
-            >
+            
+            <Link to="/contact" className="inline-flex items-center justify-center gap-3 px-6 py-3 md:px-10 md:py-5 bg-transparent hover:bg-white/10 text-white font-semibold border-2 border-white transition-colors duration-300 rounded-xl">
               <Phone size={20} />
               <span className="text-base md:text-lg">Email Us</span>
-            </a>
+            </Link>
           </motion.div>
         </div>
       </section>
