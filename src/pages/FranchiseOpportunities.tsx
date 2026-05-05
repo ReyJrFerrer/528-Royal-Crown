@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 import { CheckCircle2, ArrowRight, Store, TrendingUp, ShieldCheck, Coffee, CakeSlice, Drumstick } from 'lucide-react';
+import LazyImage from '@/components/LazyImage';
 
 
 import bakery517Logo from '@/assets/517bakery/517Bakery-logo.svg';
@@ -77,9 +78,11 @@ export default function FranchiseOpportunities() {
               className="bg-white/80 rounded-3xl overflow-hidden shadow-sm border border-slate-200 flex flex-col md:flex-row"
             >
               <div className="md:w-1/3 h-64 md:h-auto relative">
-                <img 
-                  src={heroImages[franchise.id as keyof typeof heroImages]} 
-                  alt={franchise.name} 
+                <LazyImage
+                  src={heroImages[franchise.id as keyof typeof heroImages]}
+                  alt={franchise.name}
+                  width={400}
+                  height={300}
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
                 />

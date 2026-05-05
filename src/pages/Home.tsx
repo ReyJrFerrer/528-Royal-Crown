@@ -2,6 +2,7 @@ import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, TrendingUp, Users, Award, Coffee, CakeSlice, Drumstick, MessageCircle, Phone, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useState, useEffect } from 'react';
+import LazyImage from '@/components/LazyImage';
 
 import coverPhoto from '@/assets/mainPage/cover photo.png';
 import logo from '@/assets/logo.svg';
@@ -42,9 +43,12 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img 
-            src={coverPhoto} 
-            alt="Corporate Background" 
+          <LazyImage
+            src={coverPhoto}
+            alt="Corporate Background"
+            width={1920}
+            height={1080}
+            priority
             className="w-full h-full object-cover"
             referrerPolicy="no-referrer"
           />
@@ -58,9 +62,12 @@ export default function Home() {
             transition={{ duration: 0.8 }}
           
           >
-            <img 
-              src={logo} 
-              alt="528 Royal Crown Logo" 
+            <LazyImage
+              src={logo}
+              alt="528 Royal Crown Logo"
+              width={300}
+              height={300}
+              priority
               className="h-55 md:h-75 object-contain mx-auto"
             />
           </motion.div>
@@ -134,9 +141,11 @@ export default function Home() {
               className="relative"
             >
               <div className="relative overflow-hidden rounded-3xl shadow-2xl">
-                <img 
+                <LazyImage
                   src={oldBakeryPic}
                   alt="Our first bakery in the 1970s"
+                  width={800}
+                  height={600}
                   className="w-full h-auto sepia-[30%]"
                   referrerPolicy="no-referrer"
                 />
@@ -213,6 +222,10 @@ export default function Home() {
                     animate={{ opacity: idx === currentSlide ? 1 : 0 }}
                     transition={{ duration: 1 }}
                     referrerPolicy="no-referrer"
+                    loading="lazy"
+                    decoding="async"
+                    width={800}
+                    height={600}
                   />
                 ))}
                 
@@ -318,9 +331,11 @@ export default function Home() {
                   className="group bg-white/80 rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 border border-slate-100 flex flex-col rounded-2xl"
                 >
                   <div className="relative h-64 overflow-hidden">
-                    <img 
-                      src={heroImages[brand.id as keyof typeof heroImages]} 
-                      alt={brand.name} 
+                    <LazyImage
+                      src={heroImages[brand.id as keyof typeof heroImages]}
+                      alt={brand.name}
+                      width={600}
+                      height={400}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                       referrerPolicy="no-referrer"
                     />

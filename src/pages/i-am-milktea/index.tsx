@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { Phone,  Tag, Heart, ChevronLeft, ChevronRight, MessageCircle, Users, Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import LazyImage from '@/components/LazyImage';
 
 import logoMilktea from '@/assets/iAmMilktea/iammilktea-logo.png';
 import coverPhoto from '@/assets/iAmMilktea/iAmMilkTea-Coverphoto.jpg';
@@ -38,9 +39,12 @@ export default function IAmMilktea() {
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img
+          <LazyImage
             src={coverPhoto}
             alt="I AM MILKTEA Background"
+            width={1920}
+            height={1080}
+            priority
             className="w-full h-full object-cover"
             referrerPolicy="no-referrer"
           />
@@ -55,9 +59,12 @@ export default function IAmMilktea() {
               transition={{ duration: 0.8 }}
               className="mb-8"
             >
-              <img
+              <LazyImage
                 src={logoMilktea}
                 alt="I AM MILKTEA Logo"
+                width={320}
+                height={320}
+                priority
                 className="h-80 md:h-85 object-contain mx-auto"
               />
             </motion.div>
@@ -126,6 +133,10 @@ export default function IAmMilktea() {
                     animate={{ opacity: idx === currentSlide ? 1 : 0 }}
                     transition={{ duration: 1.2 }}
                     referrerPolicy="no-referrer"
+                    loading="lazy"
+                    decoding="async"
+                    width={800}
+                    height={600}
                   />
                 ))}
 

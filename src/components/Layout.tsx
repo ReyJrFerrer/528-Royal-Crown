@@ -2,6 +2,7 @@ import { Link, Outlet, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronRight } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
+import LazyImage from '@/components/LazyImage';
 import logo from '@/assets/logo.svg';
 
 const franchises = [
@@ -24,9 +25,12 @@ export default function Layout() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             <Link to="/" className="flex items-center gap-3 group">
-              <img 
-                src={logo} 
-                alt="528 Royal Care" 
+              <LazyImage
+                src={logo}
+                alt="528 Royal Care"
+                width={40}
+                height={40}
+                priority
                 className="h-10 w-auto"
               />
               <span className="font-display font-bold text-xl tracking-tight">528 Royal Care</span>
@@ -115,9 +119,11 @@ export default function Layout() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="col-span-1 md:col-span-2">
               <Link to="/" className="flex items-center gap-2 mb-4">
-                <img 
+                <LazyImage
                   src={logo}
-                  alt="528 Royal Care" 
+                  alt="528 Royal Care"
+                  width={32}
+                  height={32}
                   className="h-8 w-auto"
                 />
                 <span className="font-display font-bold text-lg text-white tracking-tight">528 Royal Care</span>

@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { MapPin, Phone, Clock, CakeSlice, ChevronLeft, ChevronRight, MessageCircle, Star, Users, Sparkles, Truck, Heart } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import LazyImage from '@/components/LazyImage';
 
 import logo517 from '@/assets/517bakery/517Bakery-logo.svg';
 import coverphoto from '@/assets/517bakery/517Bakery-coverphoto.jpg';
@@ -52,9 +53,12 @@ export default function Bakery517() {
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img
+          <LazyImage
             src={coverphoto}
             alt="Fresh baked goods"
+            width={1920}
+            height={1080}
+            priority
             className="w-full h-full object-cover"
             referrerPolicy="no-referrer"
           />
@@ -68,9 +72,12 @@ export default function Bakery517() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8 }}
             >
-              <img
+              <LazyImage
                 src={logo517}
                 alt="New Creation 517 Bakery Logo"
+                width={320}
+                height={320}
+                priority
                 className="h-80 md:h-85 object-contain mx-auto"
               />
             </motion.div>
@@ -147,6 +154,10 @@ export default function Bakery517() {
                   animate={{ opacity: idx === currentSlide ? 1 : 0 }}
                   transition={{ duration: 1.2 }}
                   referrerPolicy="no-referrer"
+                  loading="lazy"
+                  decoding="async"
+                  width={800}
+                  height={600}
                 />
               ))}
 

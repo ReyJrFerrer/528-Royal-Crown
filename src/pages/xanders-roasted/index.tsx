@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { ChevronLeft, ChevronRight, MessageCircle,  Phone } from 'lucide-react';
 import { useState, useEffect } from 'react';
+import LazyImage from '@/components/LazyImage';
 
 import logoXanders from '@/assets/xandersLechon/xandersLechon-logo.png';
 import coverphoto from '@/assets/xandersLechon/lechon-coverphoto.jpg';
@@ -44,9 +45,12 @@ export default function XandersLechon() {
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img
+          <LazyImage
             src={coverphoto}
             alt="Delicious roasted food"
+            width={1920}
+            height={1080}
+            priority
             className="w-full h-full object-cover"
             referrerPolicy="no-referrer"
           />
@@ -61,9 +65,12 @@ export default function XandersLechon() {
               transition={{ duration: 0.8 }}
               className="mb-8"
             >
-              <img
+              <LazyImage
                 src={logoXanders}
                 alt="Xander's Lechon Logo"
+                width={320}
+                height={320}
+                priority
                 className="h-80 md:h-85 object-contain mx-auto"
               />
             </motion.div>
@@ -132,6 +139,10 @@ export default function XandersLechon() {
                     animate={{ opacity: idx === currentSlide ? 1 : 0 }}
                     transition={{ duration: 1.2 }}
                     referrerPolicy="no-referrer"
+                    loading="lazy"
+                    decoding="async"
+                    width={800}
+                    height={600}
                   />
                 ))}
 
