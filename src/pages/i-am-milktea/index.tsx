@@ -243,9 +243,9 @@ export default function IAmMilktea() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { size: 'Small', volume: '12 oz', price: 'From ₱45', description: 'Perfect for a quick treat' },
-              { size: 'Medium', volume: '16 oz',price: 'From ₱60', description: 'The classic choice' },
-              { size: 'Large', volume: '22 oz',price: 'From ₱75', description: 'Maximum satisfaction' },
+              { size: 'Small', description: '12 oz — Perfect for a quick treat' },
+              { size: 'Medium', description: '16 oz — The classic choice' },
+              { size: 'Large', description: '22 oz — Maximum satisfaction' },
             ].map((item, idx) => (
               <motion.div
                 key={idx}
@@ -255,9 +255,8 @@ export default function IAmMilktea() {
                 transition={{ delay: idx * 0.05 }}
                 className="bg-white/80 p-10 hover:shadow-xl transition-shadow rounded-2xl"
               >
-                <h4 className="text-2xl font-bold text-slate-900 mb-2">{item.size}</h4>
-                <p className="text-slate-500 mb-4">{item.volume}</p>
-                <p className="text-5xl font-bold text-[#94a036]">{item.price}</p>
+                <h4 className="text-2xl font-bold text-slate-900 mb-3">{item.size}</h4>
+                <p className="text-lg text-[#94a036]">{item.description}</p>
               </motion.div>
             ))}
           </div>
@@ -314,20 +313,7 @@ export default function IAmMilktea() {
               <p className="text-slate-600 mb-4 text-lg">
                 Buy 1, Take 1 with a <strong>50% discount</strong> on your second cup!
               </p>
-              <div className="grid grid-cols-3 gap-4 text-center mt-6">
-                <div>
-                  <p className="text-[#94a036] font-bold">Small</p>
-                  <p className="text-2xl font-bold text-slate-900">₱45</p>
-                </div>
-                <div>
-                  <p className="text-[#94a036] font-bold">Medium</p>
-                  <p className="text-2xl font-bold text-slate-900">₱60</p>
-                </div>
-                <div>
-                  <p className="text-[#94a036] font-bold">Large</p>
-                  <p className="text-2xl font-bold text-slate-900">₱75</p>
-                </div>
-              </div>
+              <p className="text-sm text-[#94a036]">Available in all sizes — Small, Medium, and Large</p>
             </motion.div>
           </div>
 

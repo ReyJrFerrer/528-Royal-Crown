@@ -99,17 +99,15 @@ export default function XandersLechon() {
               transition={{ delay: 0.4, duration: 0.8 }}
               className="flex flex-wrap gap-4 justify-center"
             >
-              <a
-                href="#menu"
-                className="px-10 py-4 bg-[#a04527] hover:bg-[#8b3a1f] text-white font-semibold transition-colors duration-300 rounded-xl"
-              >
-                View Menu
-              </a>
+              
+               <Link to="/franchise-opportunities" className="px-10 py-4 bg-[#a04527] hover:bg-[#8b3a1f] text-white font-semibold transition-colors duration-300 rounded-xl">
+               Book for Franchising
+               </Link>
               <a
                 href="#contact"
                 className="px-10 py-4 bg-white hover:bg-gray-100 text-[#a04527] font-semibold transition-colors duration-300 rounded-xl"
               >
-                Order Now
+                Contact Us
               </a>
             </motion.div>
           </div>
@@ -237,10 +235,10 @@ export default function XandersLechon() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
-              { name: 'Pork Liempo', price: '₱310', description: 'Tender and juicy' },
-              { name: 'Lechon Manok (Regular)', price: '₱290', description: 'Classic favorite' },
-              { name: 'Lechon Manok (Jumbo)', price: '₱340', description: 'Extra large serving' },
-              { name: 'Lechon Manok (Extra)', price: '₱360', description: 'Maximum satisfaction' },
+              { name: 'Pork Liempo', description: 'Tender and juicy, perfectly roasted to golden perfection' },
+              { name: 'Lechon Manok (Regular)', description: 'Classic favorite, seasoned with our signature blend' },
+              { name: 'Lechon Manok (Jumbo)', description: 'Extra large serving for the whole family' },
+              { name: 'Lechon Manok (Extra)', description: 'Maximum satisfaction in every bite' },
             ].map((item, idx) => (
               <motion.div
                 key={idx}
@@ -250,9 +248,8 @@ export default function XandersLechon() {
                 transition={{ delay: idx * 0.05 }}
                 className="bg-white/80 p-10 hover:shadow-xl transition-shadow rounded-2xl"
               >
-                <h4 className="text-2xl font-bold text-slate-900 mb-2">{item.name}</h4>
-                <p className="text-slate-500 mb-4">{item.description}</p>
-                <p className="text-5xl font-bold text-[#a04527]">{item.price}</p>
+                <h4 className="text-2xl font-bold text-slate-900 mb-3">{item.name}</h4>
+                <p className="text-lg text-[#a04527]">{item.description}</p>
               </motion.div>
             ))}
           </div>
@@ -276,8 +273,8 @@ export default function XandersLechon() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
-              { name: 'Spicy Garlic Chicken Meal', price: '₱60' },
-              { name: 'Crispy Leeg Meal', price: '₱50' },
+              { name: 'Spicy Garlic Chicken Meal', description: 'Bold and savory, packed with garlic flavor' },
+              { name: 'Crispy Leeg Meal', description: 'Crispy on the outside, tender on the inside' },
             ].map((meal, idx) => (
               <motion.div
                 key={idx}
@@ -287,8 +284,8 @@ export default function XandersLechon() {
                 transition={{ delay: idx * 0.1 }}
                 className="bg-white/80 p-12 hover:shadow-xl transition-shadow rounded-2xl"
               >
-                <h4 className="text-3xl font-bold text-slate-900 mb-6">{meal.name}</h4>
-                <p className="text-6xl font-bold text-[#a04527]">{meal.price}</p>
+                <h4 className="text-3xl font-bold text-slate-900 mb-4">{meal.name}</h4>
+                <p className="text-xl text-[#a04527]">{meal.description}</p>
               </motion.div>
             ))}
           </div>
