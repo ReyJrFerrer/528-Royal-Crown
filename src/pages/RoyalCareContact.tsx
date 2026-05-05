@@ -33,13 +33,23 @@ const RoyalCareContact = () => {
     setFormMessage("");
 
     try {
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-      
-      setMessageType("success");
-      setFormMessage("Message sent successfully (simulated).");
-      setFormData({ name: "", email: "", subject: "", message: "" });
-    } catch (err) {
+      const response = await fetch("/contact-submit.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData).toString(),
+      });
+
+      const data = await response.json();
+
+      if (data.status === "success") {
+        setMessageType("success");
+        setFormMessage(data.message);
+        setFormData({ name: "", email: "", subject: "", message: "" });
+      } else {
+        setMessageType("error");
+        setFormMessage(data.message || "Something went wrong. Please try again.");
+      }
+    } catch {
       setMessageType("error");
       setFormMessage("Sorry, there was an error sending your message. Please try again.");
     } finally {
