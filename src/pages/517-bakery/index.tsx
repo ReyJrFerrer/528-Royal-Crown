@@ -47,7 +47,16 @@ export default function Bakery517() {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
-        <title>New Creation 517 Bakery</title>
+        <title>New Creation 517 Bakery | 26 Branches Across Abra, Pangasinan & Mindoro</title>
+        <meta name="description" content="New Creation 517 Bakery offers custom cakes, bibingka, and fresh-baked goods across 26 branches in Abra, Pangasinan, and Oriental Mindoro. Open 24/7 with free delivery in Bangued area." />
+        <link rel="canonical" href="https://528royalcare.com/517-bakery" />
+        <meta property="og:title" content="New Creation 517 Bakery - Baked with Love, Served with Joy" />
+        <meta property="og:description" content="Custom cakes, money cakes, and everyday bakes at 26 locations. Free delivery, always open 24/7. Also visit our sister brands: I AM MILKTEA and Xander's Lechon." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://528royalcare.com/517-bakery" />
+        <meta property="og:site_name" content="528 Royal Care" />
+        <meta property="og:brand" content="517 Bakery" />
+        <meta name="twitter:card" content="summary_large_image" />
         <link rel="icon" type="image/png" href="/517Bakery-logo.svg?v=bakery" />
       </Helmet>
       {/* Hero Section */}

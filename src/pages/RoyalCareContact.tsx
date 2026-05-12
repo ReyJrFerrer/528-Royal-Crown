@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import {
   Mail as EnvelopeIcon,
   Phone as PhoneIcon,
@@ -60,6 +61,16 @@ const RoyalCareContact = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Contact Us | 528 Royal Care</title>
+        <meta name="description" content="Get in touch with 528 Royal Care for franchise inquiries, partnerships, or general questions. Call us at (+63) 99397535636 or visit us in Urdaneta City, Pangasinan." />
+        <link rel="canonical" href="https://528royalcare.com/contact" />
+        <meta property="og:title" content="Contact 528 Royal Care" />
+        <meta property="og:description" content="Reach out for franchise opportunities or general inquiries. We're here to help connect our community!" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://528royalcare.com/contact" />
+        <meta property="og:site_name" content="528 Royal Care" />
+      </Helmet>
       <div className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
         <div className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-2">

@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { ArrowRight, TrendingUp, Users, Award, Coffee, CakeSlice, Drumstick, MessageCircle, Phone, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import LazyImage from '@/components/LazyImage';
@@ -40,6 +41,22 @@ export default function Home() {
   const goToNext = () => setCurrentSlide((prev) => (prev + 1) % givingBackImages.length);
   return (
     <div>
+      <Helmet>
+        <title>528 Royal Care | Premier Food & Beverage Franchise Holding Company</title>
+        <meta name="description" content="528 Royal Care is a premier holding company managing successful food and beverage franchises including I AM MILKTEA, 517 Bakery, and Xander's Lechon. Partner with us for proven business models and comprehensive support." />
+        <link rel="canonical" href="https://528royalcare.com/" />
+        <meta property="og:title" content="528 Royal Care | Mastering Craft, Multiplying Blessings" />
+        <meta property="og:description" content="Premier holding company managing I AM MILKTEA, 517 Bakery, and Xander's Lechon franchises. Turnkey setup, proven ROI, and comprehensive training included." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://528royalcare.com/" />
+        <meta property="og:site_name" content="528 Royal Care" />
+        <meta property="og:brand:1" content="I AM MILKTEA" />
+        <meta property="og:brand:2" content="517 Bakery" />
+        <meta property="og:brand:3" content="Xander's Lechon" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="528 Royal Care | Mastering Craft, Multiplying Blessings" />
+        <meta name="twitter:description" content="Premier holding company managing I AM MILKTEA, 517 Bakery, and Xander's Lechon franchises." />
+      </Helmet>
       {/* Hero Section */}
       <section className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden py-16 md:py-24">
         <div className="absolute inset-0 z-0">

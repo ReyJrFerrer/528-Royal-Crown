@@ -39,7 +39,16 @@ export default function XandersLechon() {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
-        <title>Xander's Lechon and Meals-On-The-Go</title>
+        <title>Xander's Lechon & Meals On-The-Go | Fresh Roasted Lechon Manok in Calapan City</title>
+        <meta name="description" content="Xander's Lechon serves freshly roasted Lechon Manok, Pork Liempo, and rice meals in Calapan City, Oriental Mindoro. Masarap. Affordable. Quality. Open 24/7 at 2 locations." />
+        <link rel="canonical" href="https://528royalcare.com/xanders-roasted" />
+        <meta property="og:title" content="Xander's Lechon - Masarap. Affordable. Quality." />
+        <meta property="og:description" content="Fresh roasted Lechon Manok, Pork Liempo, and rice meals available 24/7. Also explore our sister brands: 517 Bakery and I AM MILKTEA." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://528royalcare.com/xanders-roasted" />
+        <meta property="og:site_name" content="528 Royal Care" />
+        <meta property="og:brand" content="Xander's Lechon" />
+        <meta name="twitter:card" content="summary_large_image" />
         <link rel="icon" type="image/png" href="/xandersLechon-logo.png?v=xanders" />
       </Helmet>
       {/* Hero Section */}

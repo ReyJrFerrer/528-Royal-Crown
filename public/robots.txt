@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://528royalcare.com/sitemap.xml
+
+Disallow: /contact-submit.php
+Disallow: /PHPMailer/

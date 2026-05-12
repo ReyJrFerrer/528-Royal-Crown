@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { CheckCircle2, ArrowRight, Store, TrendingUp, ShieldCheck, Coffee, CakeSlice, Drumstick } from 'lucide-react';
 import LazyImage from '@/components/LazyImage';
 
@@ -16,6 +17,16 @@ const franchises = [
 export default function FranchiseOpportunities() {
   return (
     <div className="bg-slate-50 min-h-screen pb-20">
+      <Helmet>
+        <title>Franchise Opportunities | Partner with 528 Royal Care</title>
+        <meta name="description" content="Partner with 528 Royal Care and build a profitable business with proven food & beverage franchise brands including 517 Bakery and Xander's Lechon. Turnkey setup, marketing support, and operational excellence included." />
+        <link rel="canonical" href="https://528royalcare.com/franchise-opportunities" />
+        <meta property="og:title" content="Franchise Opportunities | 528 Royal Care" />
+        <meta property="og:description" content="Build your business with 517 Bakery and Xander's Lechon franchises. Full support from location scouting to store design. Proven ROI." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://528royalcare.com/franchise-opportunities" />
+        <meta property="og:site_name" content="528 Royal Care" />
+      </Helmet>
       {/* Header */}
       <div className="bg-slate-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

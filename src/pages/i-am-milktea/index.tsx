@@ -33,7 +33,16 @@ export default function IAmMilktea() {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
-        <title>I AM MILKTEA</title>
+        <title>I AM MILKTEA | Premium Milktea & Fresh Breads in Urdaneta City</title>
+        <meta name="description" content="I AM MILKTEA offers premium milktea and fresh-baked breads in Urdaneta City, Pangasinan. Experience your daily dose of joy with our wide variety of creamy flavors. Open Monday-Saturday." />
+        <link rel="canonical" href="https://528royalcare.com/i-am-milktea" />
+        <meta property="og:title" content="I AM MILKTEA - Your Daily Dose of Joy" />
+        <meta property="og:description" content="Premium milktea and fresh-baked breads in Urdaneta City. Buy 1 Take 1 promos available! Also explore our sister brands: 517 Bakery and Xander's Lechon." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://528royalcare.com/i-am-milktea" />
+        <meta property="og:site_name" content="528 Royal Care" />
+        <meta property="og:brand" content="I AM MILKTEA" />
+        <meta name="twitter:card" content="summary_large_image" />
         <link rel="icon" type="image/png" href="/iammilktea-logo.png?v=milktea" />
       </Helmet>
       {/* Hero Section */}
